@@ -23,6 +23,13 @@
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 		Mutual index!
+
+		<ol>
+		    {{#each recommendations}}
+		      <li>{{recommender.first_name}} recommends {{recommendee1.first_name}} meets {{recommendee2.first_name}}</li>
+		    {{/each}} 
+	    </ol>
+
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>

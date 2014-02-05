@@ -19,8 +19,12 @@
 	<!-- this is a comment in HTML -->
 	<div class="container">
 		
-    Detail
-
+    Details
+    <ol>
+      {{#each recommendations}}
+        <li>{{recommender.first_name}} recommends {{recommendee1.first_name}} meets {{recommendee2.first_name}}</li>
+      {{/each}} 
+    </ol>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
