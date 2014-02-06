@@ -10,4 +10,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// add any functionality and listeners you want here
+	$(".submitbutton").click(submitRecommendationClicked);
+}
+
+
+function submitRecommendationClicked(e) {
+	e.preventDefault();
+	window.location = "/"; // redirect to home
 }

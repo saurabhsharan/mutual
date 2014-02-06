@@ -9,7 +9,7 @@
 	color: #CC00AA;
 }
 
-.jumbotron {
+/*.jumbotron {
 	position: relative;
 	background: none;
 }
@@ -28,8 +28,130 @@
 
 .jumbotron p {
      color: #6e6e6e;
+}*/
+
+/*.project a {
+     text-align: center;
+}
+*/
+/*h5 {
+     text-align: center;
 }
 
-.project a {
-     text-align: center;
+.peopleSelection {
+     width: 80%;
+     height: 75px;
+     background: #A0C0C0;
+}
+
+.personSelection {
+     width: 50px;
+     width: 50px;
+     background: #A0C0D0;
+}*/
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+h1 {
+  margin: 10px 0px;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+}
+h2 {
+  margin: 10px 0px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin: 10px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 479px) {
+  body {
+    background-color: #efecca;
+  }
+  .button {
+    width: 80px;
+    height: 90px;
+    margin: 32px 0px 42px 57px;
+    padding-top: 19px;
+    padding-left: 15px;
+    float: none;
+    border-radius: 10px;
+    background-color: #efecca;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #046380;
+    font-size: 15px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .peopleselector {
+    height: 152px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: #046380;
+  }
+  .submitbutton {
+    display: block;
+    width: 90px;
+    height: 40px;
+    margin: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    border-radius: 5px;
+    background-color: #002f2f;
+    color: white;
+  }
+  .formWrapper {
+    width: 90%;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+  .formInput {
+    margin: auto;
+  }
+  .recommendationlabel {
+    color: #002f2f;
+  }
 }

@@ -16,15 +16,46 @@
     <![endif]-->
   </head>
   <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-	<div class="container">
-		
-    Recommendation
+  	<div class="w-container peopleselector">
+      <a class="button" href="#">Select Person 1</a>
+      <a class="button" href="#">Select Person 2</a>
+    </div>
 
+    <div class="formWrapper">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <form name="wf-form-person-form" data-name="Person Form">
+        
+        <label class="recommendationlabel" for="name">Person 1 phone #:</label>
+        <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person1number" data-name="person1Number" required="required"></input>
+
+        <label class="recommendationlabel" for="email">Person 2 phone #:</label>
+        <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person2number" data-name="person2Number" required="required"></input>
+
+        <label class="recommendationlabel">Message to Person 1:</label>
+        <textarea class="formInput" placeholder="Why should Person 1 meet Person 2?" name="text1" data-name="text1" required="required"></textarea>
+
+        <label class="recommendationlabel">Message to Person 2:</label>
+        <textarea class="formInput" placeholder="Why should Person 2 meet Person 1?" name="text2" data-name="text2" required="required"></textarea>
+
+        <input class="submitbutton" type="button" value="Submit" data-wait="Please wait..."></input>
+      
+      </form>
+
+<!--       <div class="form-done">
+        <p>Thank you! Your submission has been received!</p>
+      </div>
+
+      <div class="form-fail">
+        <p>Oops! Something went wrong while submitting the form :(</p>
+      </div> -->
+
+    </div>
+
     <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/introHCI.js"></script>
+
   </body>
 </html>
