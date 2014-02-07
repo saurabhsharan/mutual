@@ -3,32 +3,43 @@
 exports.view = function(req, res){
   res.render('detail', {
     'recommendations': [
-	
-	{
-    	"recommender": {
-        "first_name": "Smarty",
-        "last_name": "Boy",
-        "facebookID": "XXXXX",
-        "facebookAccessToken": "XXXXX",
-        "id": "1"
+        {
+        	"recommender": {
+                "first_name": "Ambika",
+                "last_name": "Acharya",
+                "facebookID": "XXXXX",
+                "facebookAccessToken": "XXXXX",
+                "id": "1"
+    	    },
+    	    "recommendee": {
+    	        "first_name": "Nathan",
+    	        "last_name": "Eidelson",
+    	        "facebookID": "XXXXX",
+    	        "facebookAccessToken": "XXXXX",
+    	        "id": "2"
+    	    },
+    	    "id": "1",
+    	    "why": "Because he is awesome."
 	    },
-	    "recommendee1": {
-	        "first_name": "Tom",
-	        "last_name": "Smith",
-	        "facebookID": "XXXXX",
-	        "facebookAccessToken": "XXXXX",
-	        "id": "2"
+	    
+	    {
+        	"recommender": {
+                "first_name": "Saurabh",
+                "last_name": "Sharan",
+                "facebookID": "XXXXX",
+                "facebookAccessToken": "XXXXX",
+                "id": "1"
+    	    },
+    	    "recommendee": {
+    	        "first_name": "Nathan",
+    	        "last_name": "Eidelson",
+    	        "facebookID": "XXXXX",
+    	        "facebookAccessToken": "XXXXX",
+    	        "id": "2"
+    	    },
+    	    "id": "2",
+    	    "why": "Because he is awesome."
 	    },
-	    "recommendee2": {
-	        "first_name": "Sarah",
-	        "last_name": "Day",
-	        "facebookID": "XXXXX",
-	        "facebookAccessToken": "XXXXX",
-	        "id": "3"
-	    },
-	    "id": "1"
-	}
-
     ]  
   });
 };

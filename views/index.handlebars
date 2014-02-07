@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/introHCI.css" rel="stylesheet">
+	<link href="/css/index.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,18 +19,16 @@
 </head>
 
 <body>
-	<div class="container">
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
-		Mutual index!
-
-		<ol>
-		    {{#each recommendations}}
-		      <li>{{recommender.first_name}} recommends {{recommendee1.first_name}} meets {{recommendee2.first_name}}</li>
-		    {{/each}} 
-	    </ol>
-
-	</div>
+  {{#each recommendations}}
+  <div class="w-clearfix recommendation">
+    <div class="recommendername"><strong>{{recommender.first_name}}</strong></div>
+    <img class="recommenderphoto" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+    <div class="linktext">recommends</div>
+    <img class="recommendee" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+    <div class="recommendeename"><strong>{{recommendee1.first_name}}</strong>
+    </div>
+  </div>
+  {{/each}}
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
