@@ -9,6 +9,7 @@ exports.view = function(req, res){
                 "last_name": "Acharya",
                 "facebookID": "XXXXX",
                 "facebookAccessToken": "XXXXX",
+                "picture_url": "images/ambika.jpg",
                 "id": "1"
     	    },
     	    "recommendee": {
@@ -30,6 +31,7 @@ exports.view = function(req, res){
                 "last_name": "Sharan",
                 "facebookID": "XXXXX",
                 "facebookAccessToken": "XXXXX",
+                "picture_url": "images/saurabh.jpg",
                 "id": "1"
     	    },
     	    "recommendee": {

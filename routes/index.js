@@ -46,7 +46,7 @@ exports.view = function(req, res) {
             "picture_url": "images/nicholas.jpg",
             "id": "4"
           },
-          "recommendee1": {
+          "recommendee2": {
             "first_name": "Nathan",
             "last_name": "Eidelson",
             "facebookID": "XXXXX",
@@ -54,7 +54,7 @@ exports.view = function(req, res) {
             "picture_url": "images/nathan.jpg",
             "id": "2"
           },
-          "recommendee2": {
+          "recommendee1": {
             "first_name": "Ambika",
             "last_name": "Acharya",
             "facebookID": "1128653899",
