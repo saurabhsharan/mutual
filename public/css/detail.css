@@ -21,12 +21,12 @@ p {
   display: block;
   width: 298px;
   height: 375px;
-  margin: 39px auto 0px;
+  margin: 10px;
   padding-top: 0px;
   padding-bottom: 0px;
   float: none;
   border: 0px solid black;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #e6e2af;
 }
 .photo {
@@ -37,7 +37,7 @@ p {
   padding-right: 0px;
   padding-left: 0px;
   float: left;
-  border-radius: 25px;
+  border-radius: 5px;
   background-color: #ff002b;
 }
 .name {
@@ -61,9 +61,9 @@ p {
   margin-top: 9px;
   margin-right: 10px;
   margin-left: 10px;
-  padding-top: 0px;
+
   padding-right: 0px;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: #046380;
   text-align: left;
 }

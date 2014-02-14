@@ -9,54 +9,16 @@
 	color: #CC00AA;
 }
 
-h1 {
-  margin: 10px 0px;
-  font-size: 38px;
-  line-height: 44px;
-  font-weight: 700;
-}
-h2 {
-  margin: 10px 0px;
-  font-size: 32px;
-  line-height: 36px;
-  font-weight: 700;
-}
-h3 {
-  margin: 10px 0px;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 700;
-}
-h4 {
-  margin: 10px 0px;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-}
-h5 {
-  margin: 10px 0px;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 700;
-}
-h6 {
-  margin: 10px 0px;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 700;
-}
-p {
-  margin-bottom: 5px;
-}
 
 body {
   max-height: 1000px;
   max-width: 320px;
-
-  font-family: Arial, sans-serif;
+  font-family: -apple-system-font;
   color: #333;
   font-size: 14px;
   line-height: 20px;
+  padding-top: 60px;
+  margin: 0px;
 }
 
 .button {
@@ -68,21 +30,51 @@ body {
   text-decoration: none;
 }
 
-.navigation-partial {
-  height: 50px;
-  background-color: gray;
-
+.navigation-bar {
+  height: 60px;
+  width: 100%;
+  float: none;
+  background-color: #ff9696;
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  top: 0px;
 }
 
 .left-button {
-  height: 40px;
-  width: 40px;
-  margin: 5px;
+  position: static;
+  display: block;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-top: 21px;
+  margin-left: 21px;
+  float: left;
+  clear: none;
+  color: white;
+  font-size: 16px;
+  line-height: 19px;
 }
-
 .right-button {
-  height: 40px;
-  width: 40px;
-  margin: 5px;
+  position: static;
+  display: block;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-top: 21px;
+  margin-right: 21px;
   float: right;
+  clear: none;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+}
+.mutual-header {
+  display: block;
+  padding-top: 19px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  float: none;
+  color: white;
+  font-size: 28px;
+  text-align: center;
 }

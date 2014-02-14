@@ -17,22 +17,28 @@
 
 <body>
 
-  <div class="navigation-partial" id="index-navigation">
+  <div class="navigation-bar" id="index-navigation">
+    <div class="left-button">Settings</div>
+    <div class="right-button">Recommend</div>
+    <div class="mutual-header">Mutual</div>
+  </div>
 
+<!--   <div class="navigation-partial" id="index-navigation">
+    <div class-"left-button">Settings</div>
     <img class="left-button" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ski_trail_rating_symbol-blue_square.svg/600px-Ski_trail_rating_symbol-blue_square.svg.png">
 
     <div class="mutual-header">MUTUAL</div>
 
     <img class="right-button" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ski_trail_rating_symbol-blue_square.svg/600px-Ski_trail_rating_symbol-blue_square.svg.png">
 
-  </div>
+  </div> -->
 
   {{#each recommendations}}
   <div class="recommendation">
     <div class="recommendername"><strong>{{recommender.first_name}}</strong></div>
-    <img class="recommenderphoto" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+    <img class="recommenderphoto" src="{{recommender.picture_url}}">
     <div class="linktext">recommends</div>
-    <img class="recommendee" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+    <img class="recommendeephoto" src="{{recommendee1.picture_url}}">
     <div class="recommendeename"><strong>{{recommendee1.first_name}}</strong>
     </div>
   </div>

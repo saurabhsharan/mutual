@@ -14,17 +14,18 @@
 
 <body>
 
-  <div class="navigation-partial" id="detail-navigation">
-
-    <img class="left-button" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ski_trail_rating_symbol-blue_square.svg/600px-Ski_trail_rating_symbol-blue_square.svg.png">
-
-    <img class="right-button" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ski_trail_rating_symbol-blue_square.svg/600px-Ski_trail_rating_symbol-blue_square.svg.png">
-
+  <div class="navigation-bar" id="detail-navigation">
+    <div class="left-button">Back</div>
+    <div class="right-button">Text</div>
+    <div class="mutual-header">Mutual</div>
   </div>
 
+  <div id="user-number"  style="display: none;">{{recommendations.1.recommendee.phone_number}}</div>
+  <a href="sms:1-408-555-1212">Send SMS Message</a>
+
   {{#each recommendations}}
-    <div class="w-container tile">
-      <div class="w-clearfix recommendationheader">
+    <div class="tile">
+      <div class="recommendationheader">
         <img class="photo" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
         <div class="namefield"><strong>{{recommender.first_name}} &nbsp; {{recommender.last_name}}</strong>
           <br><strong>&nbsp;</strong>recommends&nbsp;
@@ -36,6 +37,7 @@
       <p>{{why}}</p>
     </div>
   {{/each}}
+
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>

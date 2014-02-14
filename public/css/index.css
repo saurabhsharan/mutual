@@ -8,25 +8,14 @@
   text-decoration: none;
 }
 
-body {
+/*body {
   border-radius: 0px;
-}
-
-.mutual-header {
-  display: inline-block;
-  width: 210px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 25px;
-  color: white;
-}
+}*/
 
 .recommendation {
   height: 175px;
-  margin-top: 61px;
-  margin-right: 11px;
-  margin-left: 10px;
-  border-radius: 25px;
+  margin: 10px;
+  border-radius: 5px;
   background-color: #e6e2af;
 }
 .photo {
@@ -38,24 +27,24 @@ body {
   border-radius: 25px;
 }
 .recommenderphoto {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin-top: 66px;
   margin-left: -112px;
   padding-bottom: 0px;
   float: left;
-  border: 1px solid black;
-  border-radius: 25px;
+  border: 1px solid gray;
+  border-radius: 45px;
 }
-.recommendee {
-  width: 125px;
-  height: 125px;
+.recommendeephoto {
+  width: 120px;
+  height: 120px;
   margin-top: -124px;
   margin-right: 0px;
   margin-left: 167px;
   float: left;
-  border: 1px solid black;
-  border-radius: 25px;
+  border: 1px solid gray;
+  border-radius: 60px;
 }
 .recommendername {
   width: 100px;
