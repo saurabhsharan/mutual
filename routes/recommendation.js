@@ -3,7 +3,7 @@
  * GET home page.
  */
  
-var twilio_client = require('twilio')('ACd83c5a0ad479b29a437a485422a929e9', '375bd090cd1b4e7b5fed4d9c713fd5c9');
+var twilio_client = require('twilio')('AC2a13ff62788619cdd2f0702a666efa50', 'a3f07171de4a3b3daf8f3160cd127dd8');
 
 exports.view = function(req, res){
   res.render('recommendation');
@@ -14,38 +14,18 @@ exports.submit_reco = function(req, res) {
   var person2_number = req.query.person2number;
   
   twilio_client.sendMessage({
-    to: '+18054509609',
-    from: '+15102704581',
-    body: 'yo'
-  }, function(err, responseData) {
-    if (err) {
-      res.send('could not send text message 1');
-    }
+    to: '+1' + person1_number,
+    from: '+18052840161',
+    body: req.query.text1 + " Go to http://mutual.herokuapp.com/detail for more info!"
   });
   
   setTimeout(function() {
     twilio_client.sendMessage({
-      to: '+14088396349',
-      from: '+15102704581',
-      body: 'yo'
-    }, function(err, responseData) {
-      if (err) {
-        res.send('could not send text message 2');
-      }
+      to: '+1' + person2_number,
+      from: '+18052840161',
+      body: req.query.text2 + " Go to http://mutual.herokuapp.com/detail for more info!"
     });
   }, 1100);
   
-  
-  
-  // twilio_client.sendMessage({
-  //   to: '+16464630213',
-  //   from: '+15102704581',
-  //   body: 'yo 2'
-  // }, function(err, responseData) {
-  //   if (err) {
-  //     res.send('could not send text message');
-  //   } else {
-  //     res.send('sent text message');
-  //   }
-  // });
+  res.redirect("/");
 };
