@@ -22,10 +22,8 @@ p {
   width: 298px;
   height: 375px;
   margin: 10px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+
   float: none;
-  border: 0px solid black;
   border-radius: 5px;
   background-color: #e6e2af;
 }
@@ -58,7 +56,7 @@ p {
   overflow-x: visible;
   overflow-y: visible;
   height: 150px;
-  margin-top: 9px;
+  margin-top: 15px;
   margin-right: 10px;
   margin-left: 10px;
 

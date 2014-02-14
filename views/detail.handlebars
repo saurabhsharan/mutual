@@ -21,14 +21,14 @@
   </div>
 
   <div id="user-number"  style="display: none;">{{recommendations.1.recommendee.phone_number}}</div>
-  
+
   {{#each recommendations}}
     <div class="tile">
       <div class="recommendationheader">
-        <img class="photo" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
-        <div class="namefield"><strong>{{recommender.first_name}} &nbsp; {{recommender.last_name}}</strong>
-          <br><strong>&nbsp;</strong>recommends&nbsp;
-          <br><strong>{{recommendee.first_name}} &nbsp; {{recommendee.last_name}}</strong>
+        <img class="photo" src="{{recommendee.picture_url}}" alt="image-placeholder.svg">
+        <div class="namefield"><strong>{{recommender.first_name}} {{recommender.last_name}}</strong>
+          <br>recommends
+          <br><strong>{{recommendee.first_name}} {{recommendee.last_name}}</strong>
         </div>
       </div>
       <div class="descriptionheader"><strong>Why Nathan?</strong>

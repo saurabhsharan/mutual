@@ -51,7 +51,7 @@ body {
   float: left;
   clear: none;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 19px;
 }
 .right-button {
@@ -64,7 +64,7 @@ body {
   float: right;
   clear: none;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   text-align: left;
 }
 .mutual-header {

@@ -16,6 +16,7 @@ exports.view = function(req, res){
     	        "last_name": "Eidelson",
     	        "facebookID": "XXXXX",
     	        "facebookAccessToken": "XXXXX",
+                "picture_url": "images/nathan.jpg",
                 "phone_number": "+18054509609",
     	        "id": "2"
     	    },
@@ -36,6 +37,7 @@ exports.view = function(req, res){
     	        "last_name": "Eidelson",
     	        "facebookID": "XXXXX",
     	        "facebookAccessToken": "XXXXX",
+                "picture_url": "images/nathan.jpg",
                 "phone_number": "+18054509609",
     	        "id": "2"
     	    },
