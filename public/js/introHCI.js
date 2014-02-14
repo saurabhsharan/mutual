@@ -49,7 +49,7 @@ function goBackClicked(e) {
 function textClicked(e) {
 	console.log("HERE!");
 	console.log($("#user-number").html());
-	//window.location = "sms:1-408-555-1212";
+	window.location.href = "sms:1-408-555-1212";
 	//console.log(number);
 }
 
