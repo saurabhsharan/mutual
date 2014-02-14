@@ -10,12 +10,17 @@ $(document).ready(function() {
  */
 function initializePage() {
 
-	$(".submitbutton").click(submitRecommendationClicked);
+  // $(".submitbutton").click(submitRecommendationClicked);
 	$("#recommendation-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .left-button").click(goBackClicked);
 	$("#index-navigation .right-button").click(createRecommendationClicked);
 	$(".recommendation").click(recommendationClicked);
-
+	
+	$('.personselect').click(function(e) {
+	  e.preventDefault();
+	  var friendName = prompt("Enter in this person's name");
+    $(this).html(friendName);
+	});
 }
 
 

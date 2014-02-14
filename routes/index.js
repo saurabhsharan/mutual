@@ -60,7 +60,7 @@ exports.view = function(req, res) {
         }
       ]
     });
-    // request("https://graph.facebook.com/me?access_token=" + req.session.fb_access_token, function(error, response, body) {
+      // request("https://graph.facebook.com/me?access_token=" + req.session.fb_access_token, function(error, response, body) {
       //   var user_info = JSON.parse(body);
       //   res.send("Hello, " + user_info['name']);
       // });

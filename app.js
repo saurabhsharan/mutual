@@ -39,6 +39,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 // Example route
 app.get('/recommendation', recommendation.view);
+app.get('/submit_reco', recommendation.submit_reco);
 app.get('/detail', detail.view);
 app.get('/fblogin', fblogin.view);
 

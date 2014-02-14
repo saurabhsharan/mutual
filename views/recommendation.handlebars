@@ -25,13 +25,13 @@
 
 
 	<div class="w-container peopleselector">
-    <a class="button" href="#">Select Person 1</a>
-    <a class="button" href="#">Select Person 2</a>
+    <a class="button personselect" href="#">Select Person 1</a>
+    <a class="button personselect" href="#">Select Person 2</a>
   </div>
 
   <div class="formWrapper">
 
-    <form name="wf-form-person-form" data-name="Person Form">
+    <form method="get" action="/submit_reco" name="wf-form-person-form" data-name="Person Form">
       
       <label class="recommendationlabel" for="name">Person 1 phone #:</label>
       <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person1number" data-name="person1Number" required="required"></input>
@@ -45,7 +45,7 @@
       <label class="recommendationlabel">Message to Person 2:</label>
       <textarea class="formInput" placeholder="Why should Person 2 meet Person 1?" name="text2" data-name="text2" required="required"></textarea>
 
-      <input class="submitbutton" type="button" value="Submit" data-wait="Please wait..."></input>
+      <input class="submitbutton" type="submit" value="Submit" data-wait="Please wait..."></input>
     
     </form>
 
