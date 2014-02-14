@@ -10,14 +10,20 @@ $(document).ready(function() {
  */
 function initializePage() {
 
-	$("#submit-button").click(submitRecommendationClicked);
+	$("#submitbutton").click(submitRecommendationClicked);
+
 	$("#recommendation-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .right-button").click(textClicked);
 
 	$("#index-navigation .right-button").click(createRecommendationClicked);
 	$(".recommendation").click(recommendationClicked);
-
+	
+	$('.personselect').click(function(e) {
+	  e.preventDefault();
+	  var friendName = prompt("Enter in this person's name");
+    $(this).html(friendName);
+	});
 }
 
 
