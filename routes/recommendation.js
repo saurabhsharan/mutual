@@ -4,9 +4,19 @@
  */
  
 var twilio_client = require('twilio')('AC2a13ff62788619cdd2f0702a666efa50', 'a3f07171de4a3b3daf8f3160cd127dd8');
+var request = require('request');
 
 exports.view = function(req, res){
-  res.render('recommendation');
+
+  // Before rendering the recommendation view, fetch the users facebook friends
+  
+  var friendslistURL = "https://graph.facebook.com/" + req.session.user_id + "/friends" + "?access_token="+ req.session.fb_access_token;
+  console.log(friendslistURL);
+  request(friendslistURL, function(error, response, body) {
+    var friends = JSON.parse(body);
+    res.render('recommendation', friends);
+  });
+
 };
 
 exports.submit_reco = function(req, res) {

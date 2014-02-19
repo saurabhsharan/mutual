@@ -1,4 +1,5 @@
 //Seed data for if user taps on the first recommendation in index
+var request = require('request');
 
 exports.view = function(req, res){
   res.render('detail', {
@@ -9,7 +10,7 @@ exports.view = function(req, res){
                 "last_name": "Acharya",
                 "facebookID": "XXXXX",
                 "facebookAccessToken": "XXXXX",
-                "picture_url": "images/ambika.jpg",
+                "picture_url": "https://graph.facebook.com/ambika.acharya.37/picture?width=200&height=200",
                 "id": "1"
     	    },
     	    "recommendee": {
@@ -17,7 +18,7 @@ exports.view = function(req, res){
     	        "last_name": "Eidelson",
     	        "facebookID": "XXXXX",
     	        "facebookAccessToken": "XXXXX",
-                "picture_url": "images/nathan.jpg",
+                "picture_url": "https://graph.facebook.com/neidelson/picture?width=200&height=200",
                 "phone_number": "+18054509609",
     	        "id": "2"
     	    },
@@ -31,7 +32,7 @@ exports.view = function(req, res){
                 "last_name": "Sharan",
                 "facebookID": "XXXXX",
                 "facebookAccessToken": "XXXXX",
-                "picture_url": "images/saurabh.jpg",
+                "picture_url": "https://graph.facebook.com/saurabhsharan/picture?width=200&height=200",
                 "id": "1"
     	    },
     	    "recommendee": {
@@ -39,7 +40,7 @@ exports.view = function(req, res){
     	        "last_name": "Eidelson",
     	        "facebookID": "XXXXX",
     	        "facebookAccessToken": "XXXXX",
-                "picture_url": "images/nathan.jpg",
+                "picture_url": "https://graph.facebook.com/neidelson/picture?width=200&height=200",
                 "phone_number": "+18054509609",
     	        "id": "2"
     	    },
