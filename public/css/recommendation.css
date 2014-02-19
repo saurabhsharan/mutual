@@ -29,6 +29,7 @@
   padding-right: 0px;
   padding-left: 0px;
   background-color: #fffad5;
+  display: none;
 }
 .person-selector {
   width: 100px;
@@ -67,7 +68,8 @@
 }
 
 .formWrapper {
-  margin: 30px;
+  margin: 30px;  
+  display: none;
 }
 .formInput {
   width: 90%;
