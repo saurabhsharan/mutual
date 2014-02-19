@@ -18,23 +18,28 @@
 
   <div class="navigation-bar" id="recommendation-navigation">
     <div class="left-button">Back</div>
-    <div class="right-button" id="submit-button">Submit!</div>
     <div class="mutual-header">Mutual</div>
   </div>
 
-	<div class="w-container peopleselector">
-    <a class="button personselect" href="#">Select Person 1</a>
-    <a class="button personselect" href="#">Select Person 2</a>
+	<div class="peopleselector">
+   <!--  <a class="button personselect" href="#">Select Person 1</a>
+    <a class="button personselect" href="#">Select Person 2</a> -->
+
+    <img class="person-selector" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+    <img class="person-selector" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+    <div class="person1-label">Person 1</div>
+    <div class="person2-label">Person 2</div>
+
   </div>
 
   <div class="formWrapper">
 
     <form method="get" action="/submit_reco" name="wf-form-person-form" data-name="Person Form">
       
-      <label class="recommendationlabel" for="name">Person 1 phone #:</label>
+      <label class="recommendationlabel" for="phone1">Person 1 phone #:</label>
       <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person1number" data-name="person1Number" required="required"></input>
 
-      <label class="recommendationlabel" for="email">Person 2 phone #:</label>
+      <label class="recommendationlabel" for="phone2">Person 2 phone #:</label>
       <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person2number" data-name="person2Number" required="required"></input>
 
       <label class="recommendationlabel">Message to Person 1:</label>

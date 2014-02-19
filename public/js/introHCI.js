@@ -10,8 +10,6 @@ $(document).ready(function() {
  */
 function initializePage() {
 
-	$("#submitbutton").click(submitRecommendationClicked);
-
 	$("#recommendation-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .right-button").click(textClicked);
@@ -22,17 +20,8 @@ function initializePage() {
 	$('.personselect').click(function(e) {
 	  e.preventDefault();
 	  var friendName = prompt("Enter in this person's name");
-    $(this).html(friendName);
+    $(this).text(friendName);
 	});
-}
-
-
-function submitRecommendationClicked(e) {
-	e.preventDefault();
-
-	//<a href="sms:1-408-555-1212">New SMS Message</a>
-
-	window.location = "/"; // redirect to home
 }
 
 function recommendationClicked(e) {
@@ -44,13 +33,9 @@ function goBackClicked(e) {
 	window.location = "/"; // redirect to home
 }
 
-// <a href="sms:1-408-555-1212">New SMS Message</a>
-
 function textClicked(e) {
-	console.log("HERE!");
 	console.log($("#user-number").html());
 	window.location.href = "sms:1-408-555-1212";
-	//console.log(number);
 }
 
 function createRecommendationClicked(e) 

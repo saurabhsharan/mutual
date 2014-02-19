@@ -12,7 +12,7 @@ exports.view = function(req, res){
 exports.submit_reco = function(req, res) {
   var person1_number = req.query.person1number;
   var person2_number = req.query.person2number;
-  
+
   twilio_client.sendMessage({
     to: '+1' + person1_number,
     from: '+18052840161',

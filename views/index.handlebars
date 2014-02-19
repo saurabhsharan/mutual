@@ -35,11 +35,14 @@
 
   {{#each recommendations}}
   <div class="recommendation">
-    <div class="recommendername"><strong>{{recommender.first_name}}</strong></div>
-    <img class="recommenderphoto" src="{{recommender.picture_url}}">
-    <div class="linktext"><3</div>
-    <img class="recommendeephoto" src="{{recommendee1.picture_url}}">
-    <div class="recommendeename"><strong>{{recommendee1.first_name}}</strong>
+
+    <img class="recommender-picture" src="{{recommender.picture_url}}" alt="image-placeholder.svg">
+    <img class="recommendation-image" src="/images/recommendation_symbol.png" alt="image-placeholder.svg">
+    <img class="recommendee-picture" src="{{recommendee1.picture_url}}" alt="image-placeholder.svg">
+    <div class="recommendation-description">
+      {{recommender.first_name}} {{recommender.last_name}} recommends that you meet {{recommendee1.first_name}} {{recommendee1.last_name}}
+    </div>
+
     </div>
   </div>
   {{/each}}
