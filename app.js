@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var recommendation = require('./routes/recommendation');
 var detail = require('./routes/detail');
 var fblogin = require('./routes/fblogin');
+var friendsearch = require('./routes/friendsearch');
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.get('/recommendation', recommendation.view);
 app.get('/submit_reco', recommendation.submit_reco);
 app.get('/detail', detail.view);
 app.get('/fblogin', fblogin.view);
+app.get('/friendsearch', friendsearch.friendsWithPrefix);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

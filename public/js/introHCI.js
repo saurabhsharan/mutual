@@ -22,6 +22,16 @@ function initializePage() {
 	  var friendName = prompt("Enter in this person's name");
     $(this).text(friendName);
 	});
+
+	$(".person-name").on('input', nameChanged);
+
+}
+
+function nameChanged(e) {
+	console.log(this.text);
+	console.log("HERE!");
+	$.get("/friendsearch", updateFriendsDisplay);
+
 }
 
 function recommendationClicked(e) {
@@ -29,7 +39,6 @@ function recommendationClicked(e) {
 }
 
 function goBackClicked(e) {
-	console.log("HERE!");
 	window.location = "/"; // redirect to home
 }
 
@@ -41,4 +50,8 @@ function textClicked(e) {
 function createRecommendationClicked(e) 
 {
 	window.location = "/recommendation";
+}
+
+function updateFriendsDisplay(result) {
+
 }
