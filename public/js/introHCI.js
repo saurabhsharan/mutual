@@ -80,14 +80,8 @@ function friendSelected(e) {
 		$(".namefield-container").hide();
 		$(".friend-list").hide();
 
-		// $(".peopleselector").css('visibility', 'visible');
-		// $(".formWrapper").css('visibility', 'visible');
 	}
 
-	  // <input type="hidden" id="person1name" name="person1name"></input>
-   //    <input type="hidden" id="person1fbid" name="person1fbid"></input>
-   //    <input type="hidden" id="person2name" name="person2name"></input>
-   //    <input type="hidden" id="person2fbid" name="person2fbid"></input>
 }
 
 function updateFriendsDisplay(result) {

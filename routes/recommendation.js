@@ -30,6 +30,7 @@ exports.submit_reco = function(req, res) {
   var newRecommendation = new models.Recommendation({
     "recommender": req.session.first_name + " " + req.session.last_name,
     "recommenderFBid": req.session.user_id,
+    "recommenderPicture": "graph.facebook.com/" + req.session.user_id + "/picture?width=200&height=200",
     "recommendee1": req.query.person1name,
     "recommendee2": req.query.person1name,
     "recommendee1FBid": req.query.person1fbid,
@@ -37,7 +38,9 @@ exports.submit_reco = function(req, res) {
     "cellphone1": person1_number,
     "cellphone2": person2_number,
     "textFor1": req.query.text1,
-    "textFor2": req.query.text2
+    "textFor2": req.query.text2,
+    "recommendee1Picture": "graph.facebook.com/" + req.query.person1fbid + "/picture?width=200&height=200",
+    "recommendee2Picture": "graph.facebook.com/" + req.query.person2fbid + "/picture?width=200&height=200",
   })
   newRecommendation.save(afterSaving);
   function afterSaving(err){
