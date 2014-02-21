@@ -25,7 +25,7 @@ function initializePage() {
 
 	$(".person-name").on('input', nameChanged);
 
-	$(".friend-tile").click(friendSelected);
+	$(document).on('click', '.friend-tile',friendSelected);
 
 }
 
@@ -57,10 +57,37 @@ function createRecommendationClicked(e)
 	window.location = "/recommendation";
 }
 
+//this.css('visibility', 'visible');
+
 function friendSelected(e) {
+
+	console.log("HERE!");
 	var name = $(this).children(".friend-tile-name").text();
 	var id = $(this).children(".friend-tile-facebookid").text();
-	
+
+	console.log(name);
+	console.log(id);
+
+	if (!$("#person1name").val()) {
+		$("#person1name").val(name);
+		$("#person1fbid").val(id);
+		$("person-name").val("");
+	} else {
+		$("#person2name").val(name);
+		$("#person2fbid").val(id);
+		$(".peopleselector").show();
+		$(".formWrapper").show();
+		$(".namefield-container").hide();
+		$(".friend-list").hide();
+
+		// $(".peopleselector").css('visibility', 'visible');
+		// $(".formWrapper").css('visibility', 'visible');
+	}
+
+	  // <input type="hidden" id="person1name" name="person1name"></input>
+   //    <input type="hidden" id="person1fbid" name="person1fbid"></input>
+   //    <input type="hidden" id="person2name" name="person2name"></input>
+   //    <input type="hidden" id="person2fbid" name="person2fbid"></input>
 }
 
 function updateFriendsDisplay(result) {

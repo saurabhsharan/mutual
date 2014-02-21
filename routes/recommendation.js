@@ -5,6 +5,7 @@
  
 var twilio_client = require('twilio')('AC2a13ff62788619cdd2f0702a666efa50', 'a3f07171de4a3b3daf8f3160cd127dd8');
 var request = require('request');
+  var models = require('../models');
 
 exports.view = function(req, res){
 
@@ -25,16 +26,15 @@ exports.view = function(req, res){
 exports.submit_reco = function(req, res) {
   var person1_number = req.query.person1number;
   var person2_number = req.query.person2number;
-  var models = require('.../models');
 
   var newRecommendation = new models.Recommendation({
     "recommender": req.session.user_id,
     "recommendee1": req.query.person1name,
     "recommendee2": req.query.person1name,
     "recommendee1FBid": req.query.person1fbid,
-    "recommendee2FBid": req.query.person2fbid,,
-    "cellphone1": person1number,
-    "cellphone2": person2number,
+    "recommendee2FBid": req.query.person2fbid,
+    "cellphone1": person1_number,
+    "cellphone2": person2_number,
     "textFor1": req.query.text1,
     "textFor2": req.query.text2
   })
