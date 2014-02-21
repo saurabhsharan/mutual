@@ -59,6 +59,8 @@ exports.submit_reco = function(req, res) {
     "recommender": req.session.user_id,
     "recommendee1": req.query.person1name,
     "recommendee2": req.query.person1name,
+    "recommendee1FBid": req.query.person1fbid,
+    "recommendee2FBid": req.query.person2fbid,,
     "cellphone1": person1number,
     "cellphone2": person2number,
     "textFor1": req.query.text1,

@@ -13,7 +13,23 @@ exports.view = function(req, res) {
     res.redirect(fb_login_url);
     return;
   }
-  res.render('index', {
+
+  models.Recommendation
+    .find({"recommendee1fbid": req.session.user_id})
+    exec(after1stQuery);
+    function after1stQuery(err, recommendations) {
+      if(err) console.log(err);
+      .find({"recommendee2fbid": req.session.user_id})
+      exec(after2ndQuery);
+
+      function after2ndQuery(err2, recommendations2){
+        if(err) console.log(err);
+        allRecommendations = recommendations.concat(recommendations2);
+        res.render('index', allRecommendations)
+      }
+  }
+
+  /*res.render('index', {
     'recommendations': [
     {
       "recommender": {
@@ -76,5 +92,5 @@ exports.view = function(req, res) {
   // request("https://graph.facebook.com/me?access_token=" + req.session.fb_access_token, function(error, response, body) {
     //   var user_info = JSON.parse(body);
     //   res.send("Hello, " + user_info['name']);
-    // });
+    // });*/
 }

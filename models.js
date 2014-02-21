@@ -6,6 +6,8 @@ var RecommendationSchema = new Mongoose.Schema({
   "recommender": String,
   "recommendee1": String,
   "recommendee2": String,
+  "recommendee1FBid": String,
+  "recommendee2FBid": String,
   "cellPhone1": String,
   "cellPhone2": String,
   "textFor1": String,
