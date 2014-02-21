@@ -32,7 +32,7 @@ exports.submit_reco = function(req, res) {
     "recommenderFBid": req.session.user_id,
     "recommenderPicture": "graph.facebook.com/" + req.session.user_id + "/picture?width=200&height=200",
     "recommendee1": req.query.person1name,
-    "recommendee2": req.query.person1name,
+    "recommendee2": req.query.person2name,
     "recommendee1FBid": req.query.person1fbid,
     "recommendee2FBid": req.query.person2fbid,
     "cellphone1": person1_number,

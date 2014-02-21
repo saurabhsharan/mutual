@@ -25,16 +25,16 @@
     <div class="recommendation-tile">
       <div class="tile-header">
 
-        <img class="tile-picture" src="{{recommenderPicture}}" alt="image-placeholder.svg">
+        <img class="tile-picture" src="http://{{recommenderPicture}}" alt="image-placeholder.svg">
         <div class="tile-header-text">
           {{recommender}} recommends {{recommendee1}} 
         </div>
-        <img class="tile-picture" src="{{recommendee1Picture}}" alt="image-placeholder.svg">
+        <img class="tile-picture" src="http://{{recommendee1Picture}}" alt="image-placeholder.svg">
 
       </div>
 
-      <h5>Why {{recommendee.first_name}}?</h5>
-      <div class="tile-description">{{why}}</div>
+      <h5>Why {{recommendee1}}?</h5>
+      <div class="tile-description">{{textFor1}}</div>
 
     </div>
   {{/each}}
