@@ -15,8 +15,7 @@ var RecommendationSchema = new Mongoose.Schema({
 var UserSchema = new Mongoose.Schema({
   "firstName": String,
   "lastName": String,
-  "facebookID": String,
-  "facebookAccessToken": String
+  "facebookID": String
 })
 
 exports.Recommendation = Mongoose.model('Recommendation', RecommendationSchema);

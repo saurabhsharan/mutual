@@ -7,11 +7,11 @@ var request = require('request');
 
 exports.friendsWithPrefix = function(req, res){
 
-  var friendslist = req.session.friendslist;
-
-  for (var friend : friendslist) {
-    console.log(friend['name']);
-  }
+  // var friendslist = req.session.friendslist;
+  // 
+  // for (var friend in friendslist) {
+  //   console.log(friend['name']);
+  // }
 
   // // Before rendering the recommendation view, fetch the users facebook friends
   // var friendslistURL = "https://graph.facebook.com/" + req.session.user_id + "/friends" + "?access_token="+ req.session.fb_access_token;
