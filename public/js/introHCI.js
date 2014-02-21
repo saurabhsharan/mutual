@@ -75,6 +75,16 @@ function friendSelected(e) {
 	} else {
 		$("#person2name").val(name);
 		$("#person2fbid").val(id);
+
+		// change image
+		var picture1 = "http://graph.facebook.com/" + $("#person1fbid").val() + "/picture?width=200&height=200";
+		var picture2 = "http://graph.facebook.com/" + id + "/picture?width=200&height=200";
+
+		$("#person-selector1").attr('src', picture1); 
+		$("#person-selector2").attr('src', picture2); 
+
+		// $("label[for='phone1']").text($("#person1name").val(name) + " phone #");
+
 		$(".peopleselector").show();
 		$(".formWrapper").show();
 		$(".namefield-container").hide();
