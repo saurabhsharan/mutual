@@ -20,14 +20,14 @@
     <div class="mutual-header">Mutual</div>
   </div>
 
-  {{#each recommendations}}
+  {{#each allRecommendations}}
   <div class="recommendation">
 
     <img class="recommender-picture" src="{{recommender.picture_url}}" alt="image-placeholder.svg">
     <img class="recommendation-image" src="/images/recommendation_symbol.png" alt="image-placeholder.svg">
     <img class="recommendee-picture" src="{{recommendee1.picture_url}}" alt="image-placeholder.svg">
     <div class="recommendation-description">
-      {{recommender.first_name}} {{recommender.last_name}} recommends that you meet {{recommendee1.first_name}} {{recommendee1.last_name}}
+      {{recommender}} recommends that you meet {{recommendee1}}
     </div>
 
     </div>

@@ -4,6 +4,7 @@ var Mongoose = require('mongoose');
 
 var RecommendationSchema = new Mongoose.Schema({
   "recommender": String,
+  "recommenderFBid": String,
   "recommendee1": String,
   "recommendee2": String,
   "recommendee1FBid": String,

@@ -28,7 +28,8 @@ exports.submit_reco = function(req, res) {
   var person2_number = req.query.person2number;
 
   var newRecommendation = new models.Recommendation({
-    "recommender": req.session.user_id,
+    "recommender": req.session.first_name + " " + req.session.last_name,
+    "recommenderFBid": req.session.user_id,
     "recommendee1": req.query.person1name,
     "recommendee2": req.query.person1name,
     "recommendee1FBid": req.query.person1fbid,

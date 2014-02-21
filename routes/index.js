@@ -8,24 +8,41 @@ var models = require('../models');
 
 exports.view = function(req, res) {
   if (!req.session.fb_access_token) {
-    var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
+    var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
     var fb_login_url = "https://www.facebook.com/dialog/oauth?client_id=607666969312706&redirect_uri=" + redirect_uri;
     res.redirect(fb_login_url);
     return;
   }
+  
+  console.log(req.session.user_id);
+  
+  models.Recommendation.find().exec(function(err, recommendations) {
+    console.log("all: " + recommendations);
+  });
 
   models.Recommendation
-    .find({"recommendee1fbid": req.session.user_id})
+    .find({"recommendee1FBid": req.session.user_id})
     .exec(after1stQuery);
     function after1stQuery(err, recommendations) {
+      console.log("first query: " + recommendations);
+      
       if(err) console.log(err);
       models.Recommendation
-      .find({"recommendee2fbid": req.session.user_id})
+      .find({"recommendee2FBid": req.session.user_id})
       .exec(after2ndQuery);
 
       function after2ndQuery(err2, recommendations2){
         if(err) console.log(err);
         allRecommendations = recommendations.concat(recommendations2);
+        
+        console.log("allRecommendations: " + allRecommendations);
+        
+        console.log(allRecommendations[0]);
+        
+        allRecommendations = {
+          "allRecommendations": allRecommendations
+        };
+        
         res.render('index', allRecommendations)
       }
   }
