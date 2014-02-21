@@ -5,9 +5,7 @@
 	<title>Mutual</title>	
 	<meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
-<!--   <link rel="apple-touch-startup-image" href="./images/startscreen-320x460.png">
- --><!--   <link rel="apple-touch-icon" href="./images/touch-icon-iphone.png" />
- -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -18,28 +16,20 @@
 <body>
 
   <div class="navigation-bar" id="index-navigation">
-    <div class="left-button">Settings</div>
     <div class="right-button">Recommend</div>
     <div class="mutual-header">Mutual</div>
   </div>
 
-<!--   <div class="navigation-partial" id="index-navigation">
-    <div class-"left-button">Settings</div>
-    <img class="left-button" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ski_trail_rating_symbol-blue_square.svg/600px-Ski_trail_rating_symbol-blue_square.svg.png">
-
-    <div class="mutual-header">MUTUAL</div>
-
-    <img class="right-button" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ski_trail_rating_symbol-blue_square.svg/600px-Ski_trail_rating_symbol-blue_square.svg.png">
-
-  </div> -->
-
   {{#each recommendations}}
   <div class="recommendation">
-    <div class="recommendername"><strong>{{recommender.first_name}}</strong></div>
-    <img class="recommenderphoto" src="{{recommender.picture_url}}">
-    <div class="linktext"><3</div>
-    <img class="recommendeephoto" src="{{recommendee1.picture_url}}">
-    <div class="recommendeename"><strong>{{recommendee1.first_name}}</strong>
+
+    <img class="recommender-picture" src="{{recommender.picture_url}}" alt="image-placeholder.svg">
+    <img class="recommendation-image" src="/images/recommendation_symbol.png" alt="image-placeholder.svg">
+    <img class="recommendee-picture" src="{{recommendee1.picture_url}}" alt="image-placeholder.svg">
+    <div class="recommendation-description">
+      {{recommender.first_name}} {{recommender.last_name}} recommends that you meet {{recommendee1.first_name}} {{recommendee1.last_name}}
+    </div>
+
     </div>
   </div>
   {{/each}}
@@ -47,6 +37,7 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
+  <script src="/js/typeahead.bundle.js"></script>
 
 </body>
 </html>

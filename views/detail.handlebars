@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Detail</title>
+  <title>Mutual</title>
   <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -20,23 +20,26 @@
     <div class="mutual-header">Mutual</div>
   </div>
 
-  <div id="user-number"  style="display: none;">{{recommendations.1.recommendee.phone_number}}</div>
 
   {{#each recommendations}}
-    <div class="tile">
-      <div class="recommendationheader">
-        <img class="photo" src="{{recommender.picture_url}}" alt="image-placeholder.svg">
-        <div class="namefield"><strong>{{recommender.first_name}} {{recommender.last_name}}</strong>
-          <br>recommends
-          <br><strong>{{recommendee.first_name}} {{recommendee.last_name}}</strong>
+    <div class="recommendation-tile">
+      <div class="tile-header">
+
+        <img class="tile-picture" src="{{recommender.picture_url}}" alt="image-placeholder.svg">
+        <div class="tile-header-text">
+          {{recommender.first_name}} recommends {{recommendee.first_name}} 
         </div>
+        <img class="tile-picture" src="{{recommendee.picture_url}}" alt="image-placeholder.svg">
+
       </div>
-      <div class="descriptionheader"><strong>Why Nathan?</strong>
-      </div>
-      <p>{{why}}</p>
+
+      <h5>Why {{recommendee.first_name}}?</h5>
+      <div class="tile-description">{{why}}</div>
+
     </div>
   {{/each}}
 
+  <div id="user-number"  style="display: none;">{{recommendations.1.recommendee.phone_number}}</div>
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>
