@@ -4,6 +4,7 @@
  */
  
 var request = require('request');
+var models = require('../models');
 
 exports.view = function(req, res){
 
@@ -24,7 +25,22 @@ exports.view = function(req, res){
     request(userDataURL, function(error, response, body) {
       var user_info = JSON.parse(body);
       req.session.user_id = user_info.id;
-      res.redirect("/");
+      
+      models.User.find({"facebookID": user_info.id}).exec(function(err, users) {
+        if (!users) {
+          var newUser = new models.User({
+            "firstName": user_info.first_name,
+            "lastName": user_info.last_name,
+            "facebookID": user_info.id
+          });
+          
+          newUser.save(function(err) {
+            res.redirect("/");
+          });
+        } else {
+          res.redirect("/");
+        }
+      });
     });
 
 	// var permissionsURL = "https://graph.facebook.com/" + user_info.id + "/permissions" + "?access_token="+ req.session.fb_access_token;

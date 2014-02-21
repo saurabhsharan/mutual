@@ -6,7 +6,6 @@
 var request = require('request');
 
 exports.friendsWithPrefix = function(req, res){
-
   var friendslist = req.session.friendslist;
   var results = new Array();
   var prefix = req.params.prefix.toLowerCase();

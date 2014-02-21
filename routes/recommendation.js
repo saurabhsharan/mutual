@@ -25,20 +25,41 @@ exports.view = function(req, res){
 exports.submit_reco = function(req, res) {
   var person1_number = req.query.person1number;
   var person2_number = req.query.person2number;
+  var models = require('.../models');
 
-  twilio_client.sendMessage({
-    to: '+1' + person1_number,
-    from: '+18052840161',
-    body: req.query.text1 + " Go to http://mutual.herokuapp.com/detail for more info!"
-  });
-  
-  setTimeout(function() {
+  var newRecommendation = new models.Recommendation({
+    "recommender": req.session.user_id,
+    "recommendee1": req.query.person1name,
+    "recommendee2": req.query.person1name,
+    "recommendee1FBid": req.query.person1fbid,
+    "recommendee2FBid": req.query.person2fbid,,
+    "cellphone1": person1number,
+    "cellphone2": person2number,
+    "textFor1": req.query.text1,
+    "textFor2": req.query.text2
+  })
+  newRecommendation.save(afterSaving);
+  function afterSaving(err){
+    if(err){
+      console.log(err);
+      res.send(500);
+    }
     twilio_client.sendMessage({
-      to: '+1' + person2_number,
+      to: '+1' + person1_number,
       from: '+18052840161',
-      body: req.query.text2 + " Go to http://mutual.herokuapp.com/detail for more info!"
+      body: req.query.text1 + " Go to http://mutual.herokuapp.com/detail for more info!"
     });
-  }, 1100);
-  
-  res.redirect("/");
+    
+    setTimeout(function() {
+      twilio_client.sendMessage({
+        to: '+1' + person2_number,
+        from: '+18052840161',
+        body: req.query.text2 + " Go to http://mutual.herokuapp.com/detail for more info!"
+      });
+    }, 1100);
+    
+    res.redirect("/");
+  }
 };
+
+
