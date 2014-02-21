@@ -14,35 +14,7 @@ exports.view = function(req, res){
 
   request(friendslistURL, function(error, response, body) {
     var friends = JSON.parse(body);
-    //console.log(friends.data);
-    req.session.friendslist = friends;
-
-    // // instantiate the bloodhound suggestion engine
-    // var numbers = new Bloodhound({
-    //   datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.num); },
-    //   queryTokenizer: Bloodhound.tokenizers.whitespace,
-    //   local: [
-    //     { num: 'one' },
-    //     { num: 'two' },
-    //     { num: 'three' },
-    //     { num: 'four' },
-    //     { num: 'five' },
-    //     { num: 'six' },
-    //     { num: 'seven' },
-    //     { num: 'eight' },
-    //     { num: 'nine' },
-    //     { num: 'ten' }
-    //   ]
-    // });
-     
-    // // initialize the bloodhound suggestion engine
-    // numbers.initialize();
-     
-    // // instantiate the typeahead UI
-    // $('.example-numbers .typeahead').typeahead(null, {
-    //   displayKey: 'num',
-    //   source: numbers.ttAdapter()
-    // });
+    req.session.friendslist = friends.data;
 
     res.render('recommendation', friends);
 

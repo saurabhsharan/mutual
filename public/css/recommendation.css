@@ -81,3 +81,9 @@
 .recommendationlabel {
   color: #002f2f;
 }
+.friend-tile {
+  margin: 10px;
+}
+.friend-tile-facebookid {
+  display: none;
+}

@@ -25,12 +25,17 @@ function initializePage() {
 
 	$(".person-name").on('input', nameChanged);
 
+	$(".friend-tile").click(friendSelected);
+
 }
 
 function nameChanged(e) {
-	console.log(this.text);
-	console.log("HERE!");
-	$.get("/friendsearch", updateFriendsDisplay);
+	var userInput = $(this).val();
+
+	if (!userInput) return false; // input field is blank
+
+	var url = "/friendsearch/" + userInput;
+	$.get(url, updateFriendsDisplay);
 
 }
 
@@ -52,6 +57,23 @@ function createRecommendationClicked(e)
 	window.location = "/recommendation";
 }
 
+function friendSelected(e) {
+	var name = $(this).children(".friend-tile-name").text();
+	var id = $(this).children(".friend-tile-facebookid").text();
+	
+}
+
 function updateFriendsDisplay(result) {
 
+	var html = "";
+
+	for (var friend in result) {
+		var friendDiv = '<div class="friend-tile"> <span class="friend-tile-name">' + result[friend].name 
+		+ '</span> <span class="friend-tile-facebookid">' + result[friend].id + '</span></div>';
+
+		html += friendDiv;
+	}
+
+	$(".friend-list").html(html);
 }
+

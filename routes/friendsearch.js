@@ -8,20 +8,15 @@ var request = require('request');
 exports.friendsWithPrefix = function(req, res){
 
   var friendslist = req.session.friendslist;
+  var results = new Array();
+  var prefix = req.params.prefix.toLowerCase();
 
-  for (var friend : friendslist) {
-    console.log(friend['name']);
+  for (var friend in friendslist) {
+    var friendName = friendslist[friend].name.toLowerCase();
+    if (friendName.search(prefix) == 0) {
+      results.push(friendslist[friend]);
+    }
   }
 
-  // // Before rendering the recommendation view, fetch the users facebook friends
-  // var friendslistURL = "https://graph.facebook.com/" + req.session.user_id + "/friends" + "?access_token="+ req.session.fb_access_token;
-  // console.log(friendslistURL);
-
-  // request(friendslistURL, function(error, response, body) {
-  //   var friends = JSON.parse(body);
-  //   console.log(friends.data);
-
-
-  // });
-
+  res.json(results);
 };

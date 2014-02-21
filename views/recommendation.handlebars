@@ -28,7 +28,14 @@
 
   </div>
 
-
+  <div class="friend-list">
+    {{#each data}}
+    <div class="friend-tile">
+      <span class="friend-tile-name">{{name}}</span>
+      <span class="friend-tile-facebookid">{{id}}</span>
+    </div>
+    {{/each}}
+  </div>
 
 	<div class="peopleselector">
     
@@ -61,14 +68,6 @@
       <input class="submitbutton" type="submit" value="Submit" data-wait="Please wait..."></input>
     
     </form>
-
-<!--       <div class="form-done">
-      <p>Thank you! Your submission has been received!</p>
-    </div>
-
-    <div class="form-fail">
-      <p>Oops! Something went wrong while submitting the form :(</p>
-    </div> -->
 
   </div>
 

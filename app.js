@@ -49,7 +49,7 @@ app.get('/recommendation', recommendation.view);
 app.get('/submit_reco', recommendation.submit_reco);
 app.get('/detail', detail.view);
 app.get('/fblogin', fblogin.view);
-app.get('/friendsearch', friendsearch.friendsWithPrefix);
+app.get('/friendsearch/:prefix', friendsearch.friendsWithPrefix);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
