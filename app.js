@@ -47,7 +47,7 @@ app.get('/', index.view);
 // Example route
 app.get('/recommendation', recommendation.view);
 app.get('/submit_reco', recommendation.submit_reco);
-app.get('/detail', detail.view);
+app.get('/detail/:fbid', detail.view);
 app.get('/fblogin', fblogin.view);
 app.get('/friendsearch/:prefix', friendsearch.friendsWithPrefix);
 

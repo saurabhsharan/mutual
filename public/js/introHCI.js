@@ -40,7 +40,8 @@ function nameChanged(e) {
 }
 
 function recommendationClicked(e) {
-	window.location = "/detail";
+  var FBid = $(this).attr("data-fb-id");
+	window.location = "/detail/" + FBid;
 }
 
 function goBackClicked(e) {
