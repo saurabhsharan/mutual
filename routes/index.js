@@ -13,7 +13,6 @@ exports.view = function(req, res) {
     res.redirect(fb_login_url);
     return;
   }
-
   res.render('index', {
     'recommendations': [
     {
