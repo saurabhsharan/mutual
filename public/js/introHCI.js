@@ -25,14 +25,15 @@ function initializePage() {
 
 	$(".person-name").on('input', nameChanged);
 
-	$(document).on('click', '.friend-tile',friendSelected);
-
+	$(".friend-tile").on('click', friendSelected);
 }
 
 function nameChanged(e) {
+	console.log("field changed");
+
 	var userInput = $(this).val();
 
-	if (!userInput) return false; // input field is blank
+	if (!userInput) userInput = "0"; // input field is blank
 
 	var url = "/friendsearch/" + userInput;
 	$.get(url, updateFriendsDisplay);
@@ -72,7 +73,8 @@ function friendSelected(e) {
 	if (!$("#person1name").val()) {
 		$("#person1name").val(name);
 		$("#person1fbid").val(id);
-		$("person-name").val("");
+		$(".person-name").val("");
+		$(".person-name").trigger("input");
 	} else {
 		$("#person2name").val(name);
 		$("#person2fbid").val(id);
@@ -107,5 +109,8 @@ function updateFriendsDisplay(result) {
 	}
 
 	$(".friend-list").html(html);
+	
+	$(".friend-tile").on('click', friendSelected);
+
 }
 
