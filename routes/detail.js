@@ -6,7 +6,7 @@ exports.view = function(req, res) {
   var FBid = req.params.fbid;
   
   models.Recommendation
-    .find({"recommendee1FBid": FBid})
+    .find({"recommendee1FBid": FBid, "recommendee2FBid": req.session.user_id})
     .exec(function(err, recommendations) {
       console.log("detail: " + recommendations);
       recommendations = {
