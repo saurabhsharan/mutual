@@ -39,8 +39,8 @@ exports.submit_reco = function(req, res) {
 
     recommendee1 : 
     { 
-      first_name: req.query.person1name,
-      last_name: req.query.person1name,
+      first_name: req.query.person1firstname,
+      last_name: req.query.person1lastname,
       facebookID: req.query.person1fbid,
       picture: "graph.facebook.com/" + req.query.person1fbid + "/picture?width=200&height=200",
       phone: person1_number,
@@ -49,8 +49,8 @@ exports.submit_reco = function(req, res) {
 
     recommendee2 : 
     { 
-      first_name: req.query.person2name,
-      last_name: req.query.person2name,
+      first_name: req.query.person2firstname,
+      last_name: req.query.person2lastname,
       facebookID: req.query.person2fbid,
       picture: "graph.facebook.com/" + req.query.person2fbid + "/picture?width=200&height=200",
       phone: person2_number,

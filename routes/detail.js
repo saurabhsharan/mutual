@@ -7,7 +7,7 @@ exports.view = function(req, res) {
   
   //NEED TO FIX THE BELOW QUERY
   models.Recommendation
-    .find({recommendee2.facebookID: FBid, recommendee1.facebookID: req.session.user_id})
+    .find({"recommendee2.facebookID": FBid, "recommendee1.facebookID": req.session.user_id})
     .exec(function(err, recommendations) {
       console.log("detail: " + recommendations);
       recommendations = {
