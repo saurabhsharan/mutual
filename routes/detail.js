@@ -5,8 +5,9 @@ var models = require('../models');
 exports.view = function(req, res) {
   var FBid = req.params.fbid;
   
+  //NEED TO FIX THE BELOW QUERY
   models.Recommendation
-    .find({"recommendee2_facebookID": FBid})
+    .find({recommendee2.facebookID: FBid, recommendee1.facebookID: req.session.user_id})
     .exec(function(err, recommendations) {
       console.log("detail: " + recommendations);
       recommendations = {
