@@ -86,6 +86,14 @@ function friendSelected(e) {
 		$(".person2-label").text(person2_firstname);
 
 		//ambika
+		$('label[for=phone1]').text(person1_firstname + " phone number:");
+		$('label[for=phone2]').text(person2_firstname + " phone number:");
+
+		$('label[for=text1]').text("Message to " + person1_firstname + ":");
+		$('label[for=text2]').text("Message to " + person2_firstname + ":");
+
+		$('[name="text1"]').attr("placeholder", "Why should " + person1_firstname + " meet " + person2_firstname + "?");
+		$('[name="text2"]').attr("placeholder", "Why should " + person2_firstname + " meet " + person1_firstname + "?");
 
 		$(".peopleselector").show();
 		$(".formWrapper").show();

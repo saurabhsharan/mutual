@@ -9,8 +9,8 @@ var models = require('../models');
 exports.view = function(req, res) {
 
   if (!req.session.fb_access_token) {
-    var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
-    //var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
+    //var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
+    var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
     var fb_login_url = "https://www.facebook.com/dialog/oauth?client_id=607666969312706&redirect_uri=" + redirect_uri;
     res.redirect(fb_login_url);
     return;
@@ -25,24 +25,18 @@ exports.view = function(req, res) {
 
   function afterQuery(err, recommendations) {
 
- //   console.log("QUERY: " + recommendations);
-    var recommendationsCopy = recommendations;
+    for (var i = 0; i < recommendations.length; i++) {
+      if (recommendations[i].recommendee2.facebookID == req.session.user_id) {
 
-    for (var i = 0; i < recommendationsCopy.length; i++) {
-      if (recommendationsCopy[i].recommendee2.facebookID == req.session.user_id) {
-        var temp = recommendationsCopy[i].recommendee1;
-        console.log(temp);
-        recommendationsCopy[i].recommendee1 = recommendationsCopy[i].recommendee2;
-        recommendationsCopy[i].recommendee2 = temp;
-        console.log(recommendationsCopy[i].recommendee2);
-
+        var temp_json = recommendations[i].recommendee1;
+        var temp = JSON.parse(JSON.stringify(temp_json));
+        recommendations[i].recommendee1 = recommendations[i].recommendee2;
+        recommendations[i].recommendee2 = temp;
       }
     }
 
-//    console.log("AFTER: " + recommendations);
-
     allRecommendations = {
-      "allRecommendations": recommendationsCopy
+      "recommendations": recommendations
     };
     
     res.render('index', allRecommendations)

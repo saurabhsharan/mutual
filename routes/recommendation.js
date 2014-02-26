@@ -16,7 +16,6 @@ exports.view = function(req, res){
   request(friendslistURL, function(error, response, body) {
     var friends = JSON.parse(body);
     req.session.friendslist = friends.data;
-    console.log(friends.data);
     res.render('recommendation', friends);
 
   });

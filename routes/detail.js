@@ -5,14 +5,32 @@ var models = require('../models');
 exports.view = function(req, res) {
   var FBid = req.params.fbid;
   
+
+  
+
+
+
   //NEED TO FIX THE BELOW QUERY
   models.Recommendation
-    .find({"recommendee2.facebookID": FBid, "recommendee1.facebookID": req.session.user_id})
+    .find({$or: [{$and: [{"recommendee2.facebookID": FBid}, {"recommendee1.facebookID": req.session.user_id}]}
+                ,{$and: [{"recommendee1.facebookID": FBid}, {"recommendee2.facebookID": req.session.user_id}]}
+                ]})    
     .exec(function(err, recommendations) {
-      console.log("detail: " + recommendations);
+
+      for (var i = 0; i < recommendations.length; i++) {
+        if (recommendations[i].recommendee2.facebookID == req.session.user_id) {
+
+          var temp_json = recommendations[i].recommendee1;
+          var temp = JSON.parse(JSON.stringify(temp_json));
+          recommendations[i].recommendee1 = recommendations[i].recommendee2;
+          recommendations[i].recommendee2 = temp;
+        }
+      }
+
       recommendations = {
         "recommendations": recommendations
       };
+      
       res.render('detail', recommendations);
     });
 };

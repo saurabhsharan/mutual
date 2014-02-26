@@ -11,12 +11,11 @@ models.User.find().remove().exec(function(err) {
   if (err) {
     console.log("Error when deleting users: " + err);
   }
-  console.log("1");
+
   var to_save_count = users_json.length;
   for (var i = 0; i < users_json.length; i++) {
     var json = users_json[i];
     var user = new models.User(json);
-      console.log("2");
 
     user.save(function(err, user) {
       if (err) {
