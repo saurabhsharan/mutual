@@ -12,7 +12,7 @@ exports.friendsWithPrefix = function(req, res){
 
   for (var friend in friendslist) {
     var friendName = friendslist[friend].name.toLowerCase();
-    if (friendName.search(prefix) == 0) {
+    if (friendName.search(prefix) == 0 || prefix == "0") {
       results.push(friendslist[friend]);
     }
   }
