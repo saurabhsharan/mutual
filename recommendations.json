@@ -1,47 +1,122 @@
 [
     {
-        "recommender": "Saurabh Sharan",
-        "recommenderFBid": "saurabhsharan",
-        "recommenderPicture": "http://content7.flixster.com/photo/10/39/35/10393529_ori.jpg",
-        "recommendee1": "Nathan Eidelson",
-        "recommendee2": "neidelson",
-        "recommendee1FBid": "Ambika Acharya",
-        "recommendee2FBid": "ambika.acharya.37",
-        "cellPhone1": "8054509609",
-        "cellPhone2": "6464630213",
-        "textFor1": "Ambika is awesome",
-        "textFor2": "Nathan is awesome",
-        "recommendee1Picture": "",
-        "recommendee2Picture": ""
-    }
-
-    {
         "recommender" : 
         { 
-        "first_name": "",
-        "last_name": "",
-        "facebookID": String,
-        "picture": String
+            "first_name": "Ambika",
+            "last_name": "Acharya",
+            "facebookID": "ambika.acharya.37",
+            "picture": "graph.facebook.com/ambika.acharya.37/picture?width=200&height=200"
          },
 
         "recommendee1" : 
         { 
             "first_name": "Nathan",
-            "last_name": String,
-            "facebookID": String,
-            "picture": String,
-            "phone": String,
-            "text": String
+            "last_name": "Eidelson",
+            "facebookID": "neidelson",
+            "picture": "graph.facebook.com/neidelson/picture?width=200&height=200",
+            "phone": "8054509609",
+            "text": "He really likes to snowboard, and you like to ski."
         },
 
         "recommendee2" : 
         { 
-            "first_name": String,
-            "last_name": String,
-            "facebookID": String,
-            "picture":" String,
-            "phone": String,
-            "text": String
+            "first_name": "Saurabh",
+            "last_name": "Sharan",
+            "facebookID": "saurabhsharan",
+            "picture": "graph.facebook.com/saurabhsharan/picture?width=200&height=200",
+            "phone": "4088396349",
+            "text": "He likes to tell jokes just like you"
         }
     }
+
+     {
+        "recommender" : 
+        { 
+            "first_name": "Saurabh",
+            "last_name": "Sharan",
+            "facebookID": "saurabhsharan",
+            "picture": "graph.facebook.com/saurabhsharan/picture?width=200&height=200"
+         },
+
+         "recommendee1" : 
+        { 
+            "first_name": "Acharya",
+            "last_name": "Acharya",
+            "facebookID": "ambika.acharya.37",
+            "picture": "graph.facebook.com/ambika.acharya.37/picture?width=200&height=200",
+            "phone": "6464630213",
+            "text": "He likes to wear colorful t-shirts."
+        },
+
+        "recommendee2" : 
+        { 
+            "first_name": "Nathan",
+            "last_name": "Eidelson",
+            "facebookID": "neidelson",
+            "picture": "graph.facebook.com/neidelson/picture?width=200&height=200",
+            "phone": "8054509609",
+            "text": "She lives in toyon near you."
+        }
+    }
+
+    {
+        "recommender" : 
+        { 
+            "first_name": "Nicholas",
+            "last_name": "Perkins",
+            "facebookID": "nickperkins94",
+            "picture": "graph.facebook.com/nickperkins94/picture?width=200&height=200"
+         },
+
+        "recommendee1" : 
+        { 
+            "first_name": "Nathan",
+            "last_name": "Eidelson",
+            "facebookID": "neidelson",
+            "picture": "graph.facebook.com/neidelson/picture?width=200&height=200",
+            "phone": "8054509609",
+            "text": "description"
+        },
+
+        "recommendee2" : 
+        { 
+            "first_name": "Saurabh",
+            "last_name": "Sharan",
+            "facebookID": "saurabhsharan",
+            "picture": "graph.facebook.com/saurabhsharan/picture?width=200&height=200",
+            "phone": "4088396349",
+            "text": "blah"
+        }
+    }
+
+    {
+        "recommender" : 
+        { 
+            "first_name": "Nicholas",
+            "last_name": "Perkins",
+            "facebookID": "nickperkins94",
+            "picture": "graph.facebook.com/nickperkins94/picture?width=200&height=200"
+         },
+
+        "recommendee1" : 
+        { 
+            "first_name": "Ambika",
+            "last_name": "Acharya",
+            "facebookID": "ambika.acharya.37",
+            "picture": "graph.facebook.com/ambika.acharya.37/picture?width=200&height=200",
+            "phone": "6464630213",
+            "text": "test on multiple people recommending Saurabh but not to Nathan"
+        },
+
+        "recommendee2" : 
+        { 
+            "first_name": "Saurabh",
+            "last_name": "Sharan",
+            "facebookID": "saurabhsharan",
+            "picture": "graph.facebook.com/saurabhsharan/picture?width=200&height=200",
+            "phone": "4088396349",
+            "text": "test on multiple people recommending Saurabh but not to Nathan"
+        }
+    }
+
 ]
