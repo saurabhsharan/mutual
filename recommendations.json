@@ -14,4 +14,34 @@
         "recommendee1Picture": "",
         "recommendee2Picture": ""
     }
+
+    {
+        "recommender" : 
+        { 
+        "first_name": "",
+        "last_name": "",
+        "facebookID": String,
+        "picture": String
+         },
+
+        "recommendee1" : 
+        { 
+            "first_name": "Nathan",
+            "last_name": String,
+            "facebookID": String,
+            "picture": String,
+            "phone": String,
+            "text": String
+        },
+
+        "recommendee2" : 
+        { 
+            "first_name": String,
+            "last_name": String,
+            "facebookID": String,
+            "picture":" String,
+            "phone": String,
+            "text": String
+        }
+    }
 ]
