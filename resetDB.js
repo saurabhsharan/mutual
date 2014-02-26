@@ -11,12 +11,13 @@ models.User.find().remove().exec(function(err) {
   if (err) {
     console.log("Error when deleting users: " + err);
   }
-    
+  console.log("1");
   var to_save_count = users_json.length;
   for (var i = 0; i < users_json.length; i++) {
     var json = users_json[i];
     var user = new models.User(json);
-    
+      console.log("2");
+
     user.save(function(err, user) {
       if (err) {
         console.log("Error when saving user: " + err);
@@ -31,23 +32,23 @@ models.User.find().remove().exec(function(err) {
         models.Recommendation.find().remove().exec(function(err) {
           if (err) {
             console.log("Error when deleting recommendations: " + err);
-            
-            var to_save_count = recommendations_json.length;
-            for (var i = 0; i < recommendations_json.length; i++) {
-              var json = recommendations_json[i];
-              var rec = new models.Recommendation(json);
+          }
 
-              rec.save(function(err, rec) {
-                if (err) {
-                  console.log("Error when saving recommendation: " + err);
-                }
+          var to_save_count = recommendations_json.length;
+          for (var i = 0; i < recommendations_json.length; i++) {
+            var json = recommendations_json[i];
+            var rec = new models.Recommendation(json);
 
-                to_save_count--;
-                if (to_save_count <= 0) {
-                  console.log("Finished saving recommendations");
-                }
-              });
-            }
+            rec.save(function(err, rec) {
+              if (err) {
+                console.log("Error when saving recommendation: " + err);
+              }
+
+              to_save_count--;
+              if (to_save_count <= 0) {
+                console.log("Finished saving recommendations");
+              }
+            });
           }
         });
       }
