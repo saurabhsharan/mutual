@@ -16,12 +16,6 @@ function initializePage() {
 
 	$("#index-navigation .right-button").click(createRecommendationClicked);
 	$(".recommendation").click(recommendationClicked);
-	
-	$('.personselect').click(function(e) {
-	  e.preventDefault();
-	  var friendName = prompt("Enter in this person's name");
-    $(this).text(friendName);
-	});
 
 	$(".person-name").on('input', nameChanged);
 
@@ -59,34 +53,39 @@ function createRecommendationClicked(e)
 	window.location = "/recommendation";
 }
 
-//this.css('visibility', 'visible');
-
 function friendSelected(e) {
 
-	console.log("HERE!");
-	var name = $(this).children(".friend-tile-name").text();
+	var name = $(this).children(".friend-tile-name").text().split(" ");
+	var firstname = name[0];
+	var lastname = name[1];
+	
 	var id = $(this).children(".friend-tile-facebookid").text();
 
-	console.log(name);
-	console.log(id);
-
-	if (!$("#person1name").val()) {
-		$("#person1name").val(name);
+	if (!$("#person1firstname").val()) {
+		$("#person1firstname").val(firstname);
+		$("#person1lastname").val(lastname);
 		$("#person1fbid").val(id);
 		$(".person-name").val("");
 		$(".person-name").trigger("input");
+
 	} else {
-		$("#person2name").val(name);
+		$("#person2firstname").val(firstname);
+		$("#person2lastname").val(lastname);
 		$("#person2fbid").val(id);
 
-		// change image
+		// update images
 		var picture1 = "http://graph.facebook.com/" + $("#person1fbid").val() + "/picture?width=200&height=200";
 		var picture2 = "http://graph.facebook.com/" + id + "/picture?width=200&height=200";
-
 		$("#person-selector1").attr('src', picture1); 
 		$("#person-selector2").attr('src', picture2); 
 
-		// $("label[for='phone1']").text($("#person1name").val(name) + " phone #");
+		var person1_firstname = $("#person1firstname").val();
+		var person2_firstname = $("#person2firstname").val();
+
+		$(".person1-label").text(person1_firstname);
+		$(".person2-label").text(person2_firstname);
+
+		//ambika
 
 		$(".peopleselector").show();
 		$(".formWrapper").show();
@@ -94,7 +93,6 @@ function friendSelected(e) {
 		$(".friend-list").hide();
 
 	}
-
 }
 
 function updateFriendsDisplay(result) {
