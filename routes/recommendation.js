@@ -28,21 +28,38 @@ exports.submit_reco = function(req, res) {
   var person2_number = req.query.person2number;
 
   var newRecommendation = new models.Recommendation({
-    "recommender": req.session.first_name + " " + req.session.last_name,
-    "recommenderFBid": req.session.user_id,
-    "recommenderPicture": "graph.facebook.com/" + req.session.user_id + "/picture?width=200&height=200",
-    "recommendee1": req.query.person1name,
-    "recommendee2": req.query.person2name,
-    "recommendee1FBid": req.query.person1fbid,
-    "recommendee2FBid": req.query.person2fbid,
-    "cellphone1": person1_number,
-    "cellphone2": person2_number,
-    "textFor1": req.query.text1,
-    "textFor2": req.query.text2,
-    "recommendee1Picture": "graph.facebook.com/" + req.query.person1fbid + "/picture?width=200&height=200",
-    "recommendee2Picture": "graph.facebook.com/" + req.query.person2fbid + "/picture?width=200&height=200",
+
+    recommender : 
+    { 
+      first_name: req.session.first_name,
+      last_name: req.session.last_name,
+      facebookID: req.session.user_id,
+      picture: "graph.facebook.com/" + req.session.user_id + "/picture?width=200&height=200"
+    },
+
+    recommendee1 : 
+    { 
+      first_name: req.query.person1name,
+      last_name: req.query.person1name,
+      facebookID: req.query.person1fbid,
+      picture: "graph.facebook.com/" + req.query.person1fbid + "/picture?width=200&height=200",
+      phone: person1_number,
+      text: req.query.text1
+    },
+
+    recommendee2 : 
+    { 
+      first_name: req.query.person2name,
+      last_name: req.query.person2name,
+      facebookID: req.query.person2fbid,
+      picture: "graph.facebook.com/" + req.query.person2fbid + "/picture?width=200&height=200",
+      phone: person2_number,
+      text: req.query.text2
+    }
+  
   })
   newRecommendation.save(afterSaving);
+
   function afterSaving(err){
     if(err){
       console.log(err);

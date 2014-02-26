@@ -41,7 +41,7 @@ function nameChanged(e) {
 }
 
 function recommendationClicked(e) {
-  var FBid = $(this).attr("data-fb-id");
+ 	var FBid = $(this).attr("data-fb-id");
 	window.location = "/detail/" + FBid;
 }
 

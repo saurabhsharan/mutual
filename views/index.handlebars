@@ -21,13 +21,13 @@
   </div>
 
   {{#each allRecommendations}}
-  <div class="recommendation" data-fb-id="{{recommendee1FBid}}">
+  <div class="recommendation" data-fb-id="{{recommendee1.facebookID}}">
 
-    <img class="recommender-picture" src="http://{{recommenderPicture}}" alt="image-placeholder.svg">
+    <img class="recommender-picture" src="http://{{recommender.picture}}" alt="image-placeholder.svg">
     <img class="recommendation-image" src="/images/recommendation_symbol.png" alt="image-placeholder.svg">
-    <img class="recommendee-picture" src="http://{{recommendee1Picture}}" alt="image-placeholder.svg">
+    <img class="recommendee-picture" src="http://{{recommendee2.picture}}" alt="image-placeholder.svg">
     <div class="recommendation-description">
-      {{recommender}} recommends that you meet {{recommendee1}}
+      {{recommender.firstname}} recommends that you meet {{recommendee2.firstname}}
     </div>
 
     </div>

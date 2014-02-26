@@ -10,8 +10,8 @@ exports.view = function(req, res){
 
   var permissions = "read_friendlists"
   var fb_code = req.query.code;
-  //var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
-  var redirect_uri = encodeURIComponent("http://mutual-test.herokuapp.com/fblogin");
+  var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
+  //var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
 
   var access_token_url = "https://graph.facebook.com/oauth/access_token?client_id=607666969312706&redirect_uri=" + redirect_uri + 
   "&client_secret=300b02a4cbc79db08ce874b7aa2a2f71&code=" + fb_code +
@@ -32,8 +32,8 @@ exports.view = function(req, res){
       models.User.find({"facebookID": user_info.id}).exec(function(err, users) {
         if (!users) {
           var newUser = new models.User({
-            "firstName": user_info.first_name,
-            "lastName": user_info.last_name,
+            "first_name": user_info.first_name,
+            "last_name": user_info.last_name,
             "facebookID": user_info.id
           });
           
