@@ -18,13 +18,17 @@ exports.view = function(req, res){
   "&permissions=" + permissions;
 
   request(access_token_url, function(error, response, body) {
+
+    if (error) console.log(error);
+    console.log(body);
+    console.log("=====");
+
     req.session.fb_access_token = body.substring(13, body.indexOf("&"));
 
     // After user is logged in, save their facebook id
     
     var userDataURL = "https://graph.facebook.com/me?access_token=" + req.session.fb_access_token;
     request(userDataURL, function(error, response, body) {
-      console.log(body);
       var user_info = JSON.parse(body);
       req.session.user_id = user_info.id;
       req.session.first_name = user_info.first_name;
