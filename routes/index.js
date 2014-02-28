@@ -9,13 +9,18 @@ var models = require('../models');
 exports.view = function(req, res) {
 
   if (!req.session.fb_access_token) {
-    var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
-    // var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
+    //var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
+    var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
     var fb_login_url = "https://www.facebook.com/dialog/oauth?client_id=607666969312706&redirect_uri=" + redirect_uri;
     res.redirect(fb_login_url);
     return;
   }
   
+  if (req.query.alternate === 'true') {
+    req.session.alternate = true;
+  } else if (req.query.alternate === 'false') {
+    req.session.alternate = false;
+  }
   
   console.log(req.session.user_id);
 

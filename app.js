@@ -48,7 +48,6 @@ app.get('/', index.view);
 app.get('/recommendation', recommendation.view);
 app.get('/submit_reco', recommendation.submit_reco);
 app.get('/detail/:fbid', detail.view);
-app.get('/detail2/:fbid', detail.view2);
 app.get('/fblogin', fblogin.view);
 app.get('/friendsearch/:prefix', friendsearch.friendsWithPrefix);
 
