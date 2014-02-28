@@ -13,6 +13,8 @@ function initializePage() {
 	$("#recommendation-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .right-button").click(textClicked);
+
+//	$(".text-button")
 	$('.text-button').click(textClicked);
 
 	$("#index-navigation .right-button").click(createRecommendationClicked);
@@ -37,7 +39,7 @@ function nameChanged(e) {
 
 function recommendationClicked(e) {
  	var FBid = $(this).attr("data-fb-id");
-	window.location = "/detail/" + FBid;
+	window.location = "/detail2/" + FBid;
 }
 
 function goBackClicked(e) {
@@ -46,7 +48,8 @@ function goBackClicked(e) {
 
 function textClicked(e) {
 	console.log($("#user-number").html());
-	window.location.href = "sms:1-408-555-1212";
+	var number = $("#user-number").html();
+	window.location.href = "sms:" + number;
 }
 
 function createRecommendationClicked(e) 

@@ -1,0 +1,138 @@
+body {
+  padding-top: 1px;
+}
+h5 {
+  padding-left: 20px;
+  color: #193441;
+}
+
+.detail-header {
+  height: 150px;
+  margin-bottom: 15px;
+/*  background-color: #ff9c9c;
+*/}
+.header-picture {
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  margin-left: 15px;
+  float: left;
+  border-radius: 60px;
+  border: 2px solid #105B63;
+
+}
+.header-name {
+  width: 170px;
+  margin-top: 45px;
+  float: right;
+  font-size: 19px;
+  text-align: center;
+}
+.text-button {
+  width: 130px;
+  height: 40px;
+  margin-top: 28px;
+  margin-right: 22px;
+  padding-top: 9px;
+  float: right;
+  background-color: #91aa9d;
+  color: #080808;
+  text-align: center;
+}
+
+
+  .recommendation-tile {
+    height: auto;
+    margin: 15px;
+    background-color: #fffad5;
+  }
+  .tile-header {
+    height: 110px;
+    background-color: #91aa9d;
+  }
+  .tile-picture {
+    width: 80px;
+    margin-top: -53px;
+    margin-left: 16px;
+    padding-top: 0px;
+    padding-left: 0px;
+    border-radius: 40px;
+    border: 2px solid #105B63;
+  }
+  .tile-header-text {
+    position: static;
+    display: inline-block;
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 100px;
+    height: 64px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 71px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    float: none;
+    clear: none;
+    text-align: center;
+    font-size: 15px;
+  }
+  .tile-description {
+    height: auto;
+    min-height: 100px;
+    margin-left: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+/*
+.recommendation-tile {
+  height: auto;
+  margin: 15px;
+  background-color: #fffad5;
+}
+.tile-header {
+  height: 100px;
+  background-color: #91aa9d;
+}
+.tile-picture {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding-left: 0px;
+  border-radius: 35px;
+  border: 2px solid #105B63
+
+}
+.tile-header-text {
+  position: static;
+  display: inline-block;
+  overflow-x: visible;
+  overflow-y: visible;
+  width: 100px;
+  height: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 18px;
+  padding-left: 17px;
+  float: none;
+  clear: none;
+  color: #193441;
+  text-align: center;
+  font-size: 13px;
+}
+.tile-description {
+  height: auto;
+  min-height: 100px;
+  margin-left: 0px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  color: #105B63;
+
+}
+
+*/
