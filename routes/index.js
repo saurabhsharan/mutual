@@ -16,8 +16,10 @@ exports.view = function(req, res) {
     return;
   }
   
-  if (req.params.alternate) {
+  if (req.query.alternate === 'true') {
     req.session.alternate = true;
+  } else if (req.query.alternate === 'false') {
+    req.session.alternate = false;
   }
   
   console.log(req.session.user_id);
