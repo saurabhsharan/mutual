@@ -39,7 +39,7 @@ function nameChanged(e) {
 
 function recommendationClicked(e) {
  	var FBid = $(this).attr("data-fb-id");
-	window.location = "/detail2/" + FBid;
+	window.location = "/detail/" + FBid;
 }
 
 function goBackClicked(e) {
