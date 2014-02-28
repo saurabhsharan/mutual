@@ -67,14 +67,14 @@ exports.submit_reco = function(req, res) {
     twilio_client.sendMessage({
       to: '+1' + person1_number,
       from: '+18052840161',
-      body: req.query.text1 + " Go to http://mutual.herokuapp.com/ for more info!"
+      body: "You have a new recommendation: Go to http://mutual.herokuapp.com/ for more info!"
     });
     
     setTimeout(function() {
       twilio_client.sendMessage({
         to: '+1' + person2_number,
         from: '+18052840161',
-        body: req.query.text2 + " Go to http://mutual.herokuapp.com/ for more info!"
+        body: "You have a new recommendation: Go to http://mutual.herokuapp.com/ for more info!"
       });
     }, 1100);
     
