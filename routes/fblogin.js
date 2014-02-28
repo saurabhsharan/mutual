@@ -24,6 +24,7 @@ exports.view = function(req, res){
     
     var userDataURL = "https://graph.facebook.com/me?access_token=" + req.session.fb_access_token;
     request(userDataURL, function(error, response, body) {
+      console.log(body);
       var user_info = JSON.parse(body);
       req.session.user_id = user_info.id;
       req.session.first_name = user_info.first_name;
