@@ -21,7 +21,7 @@ exports.view = function(req, res) {
   } else if (req.query.alternate === 'false') {
     req.session.alternate = false;
   }
-  
+
   console.log(req.session.user_id);
 
   models.Recommendation
