@@ -23,38 +23,14 @@ exports.view = function(req, res) {
       }
 
       recommendations = {
-        "recommendations": recommendations
-      };
-      
-      res.render('detail', recommendations);
-    });
-};
-
-exports.view2 = function(req, res) {
-  var FBid = req.params.fbid;
-
-  //NEED TO FIX THE BELOW QUERY
-  models.Recommendation
-    .find({$or: [{$and: [{"recommendee2.facebookID": FBid}, {"recommendee1.facebookID": req.session.user_id}]}
-                ,{$and: [{"recommendee1.facebookID": FBid}, {"recommendee2.facebookID": req.session.user_id}]}
-                ]})    
-    .exec(function(err, recommendations) {
-
-      for (var i = 0; i < recommendations.length; i++) {
-        if (recommendations[i].recommendee2.facebookID == req.session.user_id) {
-
-          var temp_json = recommendations[i].recommendee1;
-          var temp = JSON.parse(JSON.stringify(temp_json));
-          recommendations[i].recommendee1 = recommendations[i].recommendee2;
-          recommendations[i].recommendee2 = temp;
-        }
-      }
-
-      recommendations = {
         "recommendations": recommendations,
         "recommendee": recommendations[0].recommendee2
       };
       
-      res.render('detail2', recommendations);
+      if (req.session.alternate || req.params.alternate) {
+        res.render('detail2', recommendations);
+      } else {
+        res.render('detail', recommendations);
+      }
     });
 };

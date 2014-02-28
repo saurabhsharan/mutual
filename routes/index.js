@@ -16,6 +16,9 @@ exports.view = function(req, res) {
     return;
   }
   
+  if (req.params.alternate) {
+    req.session.alternate = true;
+  }
   
   console.log(req.session.user_id);
 
