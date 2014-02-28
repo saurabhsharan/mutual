@@ -13,6 +13,7 @@ function initializePage() {
 	$("#recommendation-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .right-button").click(textClicked);
+	$('.text-button').click(textClicked);
 
 	$("#index-navigation .right-button").click(createRecommendationClicked);
 	$(".recommendation").click(recommendationClicked);
