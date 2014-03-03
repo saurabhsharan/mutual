@@ -5,11 +5,25 @@ $(document).ready(function() {
 	initializePage();
 })
 
+function isValidNumber(num) {
+  if (num.length != 10) return false;
+
+  if (!$.isNumeric(num)) return false;
+
+  for (var i = 0; i < num.length; i++) {
+    var c = num[i];
+    if (!(c >= '0' && c <= '9')) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
-
 	$("#recommendation-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .left-button").click(goBackClicked);
 	$("#detail-navigation .right-button").click(textClicked);
@@ -23,6 +37,24 @@ function initializePage() {
 	$(".person-name").on('input', nameChanged);
 
 	$(".friend-tile").on('click', friendSelected);
+	
+	$("#reco-form").submit(function(e) {
+	  var number1 = $("#number1").val();
+	  var number2 = $("#number2").val();
+	  
+	  if (!isValidNumber(number1) || !isValidNumber(number2)) {
+	    alert("You must enter both people's numbers as a 10 digit phone number.")
+	    e.preventDefault();
+	  } else if ($("#text1").val() == "" || $("#text2").val() == "") {
+	    alert("You must enter something in the messages field.")
+	    e.preventDefault();
+	  }
+	});
+	
+	$("#mutualHeader").click(function(e) {
+	  e.preventDefault();
+	  window.location = "/";
+	})
 }
 
 function nameChanged(e) {
@@ -34,7 +66,6 @@ function nameChanged(e) {
 
 	var url = "/friendsearch/" + userInput;
 	$.get(url, updateFriendsDisplay);
-
 }
 
 function recommendationClicked(e) {
@@ -48,6 +79,8 @@ function goBackClicked(e) {
 
 function textClicked(e) {
 	var textURL = "sms://" + $("#user-number").text();
+	console.log(textURL);
+	ga("send", "event", "text", "click");
 	window.location.href = textURL;
 }
 
@@ -122,4 +155,3 @@ function updateFriendsDisplay(result) {
 	$(".friend-tile").on('click', friendSelected);
 
 }
-
