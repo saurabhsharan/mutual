@@ -51,8 +51,10 @@ app.get('/detail/:fbid', detail.view);
 app.get('/fblogin', fblogin.view);
 app.get('/friendsearch/:prefix', friendsearch.friendsWithPrefix);
 
-if (typeof NODE_ENV === 'undefined') {
+if (typeof process.env.NODE_ENV === 'undefined') {
   NODE_ENV = 'localhost';
+} else {
+  NODE_ENV = 'heroku';
 }
 
 http.createServer(app).listen(app.get('port'), function(){
