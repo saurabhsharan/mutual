@@ -48,7 +48,7 @@
 
   <div class="formWrapper">
 
-    <form method="get" action="/submit_reco" name="wf-form-person-form" data-name="Person Form">
+    <form method="get" id="reco-form" action="/submit_reco" name="wf-form-person-form" data-name="Person Form">
 
       <input type="hidden" id="person1firstname" name="person1firstname"></input>
       <input type="hidden" id="person1lastname" name="person1lastname"></input>
@@ -59,16 +59,16 @@
       <input type="hidden" id="person2fbid" name="person2fbid"></input>
       
       <label class="recommendationlabel" for="phone1">Person 1 phone #:</label>
-      <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person1number" data-name="person1Number" required="required"></input>
+      <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person1number" data-name="person1Number" id="number1" required="required"></input>
 
       <label class="recommendationlabel" for="phone2">Person 2 phone #:</label>
-      <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person2number" data-name="person2Number" required="required"></input>
+      <input class="formInput" type="text" placeholder="(XXX) XXX-XXXX" name="person2number" data-name="person2Number" id="number2" required="required"></input>
 
       <label class="recommendationlabel" for="text1">Message to Person 1:</label>
-      <textarea class="formInput" placeholder="Why should Person 1 meet Person 2?" name="text1" data-name="text1" required="required"></textarea>
+      <textarea class="formInput" placeholder="Why should Person 1 meet Person 2?" name="text1" data-name="text1" id="text1" required="required"></textarea>
 
       <label class="recommendationlabel" for="text2">Message to Person 2:</label>
-      <textarea class="formInput" placeholder="Why should Person 2 meet Person 1?" name="text2" data-name="text2" required="required"></textarea>
+      <textarea class="formInput" placeholder="Why should Person 2 meet Person 1?" name="text2" data-name="text2" id="text2" required="required"></textarea>
 
       <input class="submitbutton" type="submit" value="Submit" data-wait="Please wait..."></input>
     
