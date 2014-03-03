@@ -76,7 +76,7 @@ exports.submit_reco = function(req, res) {
         from: '+18052840161',
         body: "You have a new recommendation: Go to http://mutual.herokuapp.com/ for more info!"
       });
-    }, 1100);
+    }, 500);
     
     res.redirect("/");
   }

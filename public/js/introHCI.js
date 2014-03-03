@@ -50,6 +50,11 @@ function initializePage() {
 	    e.preventDefault();
 	  }
 	});
+	
+	$("#mutualHeader").click(function(e) {
+	  e.preventDefault();
+	  window.location = "/";
+	})
 }
 
 function nameChanged(e) {
@@ -75,6 +80,7 @@ function goBackClicked(e) {
 function textClicked(e) {
 	var textURL = "sms:" + $("#user-number").html();
 	console.log(textURL);
+	ga("send", "event", "text", "click");
 	window.location.href = textURL;
 }
 

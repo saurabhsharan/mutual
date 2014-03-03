@@ -30,6 +30,7 @@ exports.view = function(req, res) {
 
   models.Recommendation
     .find({$or: [{"recommendee1.facebookID": req.session.user_id}, {"recommendee2.facebookID": req.session.user_id}]})
+    .sort({id: -1})
     .exec(afterQuery);
 
   function afterQuery(err, recommendations) {
