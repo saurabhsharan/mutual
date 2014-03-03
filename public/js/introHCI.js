@@ -47,9 +47,9 @@ function goBackClicked(e) {
 }
 
 function textClicked(e) {
-	console.log($("#user-number").html());
-	var number = $("#user-number").html();
-	window.location.href = "sms:" + number;
+\	var textURL = "sms:" + $("#user-number").html();
+	console.log(textURL);
+	window.location.href = textURL;
 }
 
 function createRecommendationClicked(e) 

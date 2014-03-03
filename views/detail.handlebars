@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="/css/detail.css" rel="stylesheet">
+  <link href="/css/detail2.css" rel="stylesheet">
   <link href="/css/app.css" rel="stylesheet">
 </head>
 
@@ -16,30 +16,33 @@
 
   <div class="navigation-bar" id="detail-navigation">
     <div class="left-button">Back</div>
-    <div class="right-button">Text</div>
     <div class="mutual-header">Mutual</div>
   </div>
+  
 
-
+  <div class="detail-header">
+    <img class="header-picture" src="http://{{recommendee.picture}}" alt="image-placeholder.svg">
+    <div class="header-name">{{recommendee.first_name}} {{recommendee.last_name}}</div>
+    <div class="text-button">Text {{recommendee.first_name}}</div>
+  </div>
+ 
   {{#each recommendations}}
     <div class="recommendation-tile">
       <div class="tile-header">
 
         <img class="tile-picture" src="http://{{recommender.picture}}" alt="image-placeholder.svg">
-        <div class="tile-header-text">
-          {{recommender.first_name}} recommends {{recommendee2.first_name}} 
-        </div>
-        <img class="tile-picture" src="http://{{recommendee2.picture}}" alt="image-placeholder.svg">
 
+        <div class="tile-header-text">
+          {{recommender.first_name}} says:                           
+        </div> 
       </div>
 
-      <h5>Why {{recommendee2.first_name}}?</h5>
       <div class="tile-description">{{recommendee2.text}}</div>
 
     </div>
   {{/each}}
 
-  <div id="user-number"  style="display: none;">{{recommendations.1.recommendee2.phone}}</div>
+  <div id="user-number"  style="display: none;">{{recommendee.phone}}</div>
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>
