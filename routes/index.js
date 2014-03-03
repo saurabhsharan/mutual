@@ -7,10 +7,13 @@ var request = require('request');
 var models = require('../models');
 
 exports.view = function(req, res) {
-
   if (!req.session.fb_access_token) {
-    //var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
-    var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
+    if (NODE_ENV == 'localhost') {
+      var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
+    } else {
+      var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
+    }
+
     var fb_login_url = "https://www.facebook.com/dialog/oauth?client_id=607666969312706&redirect_uri=" + redirect_uri;
     res.redirect(fb_login_url);
     return;

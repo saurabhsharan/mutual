@@ -51,6 +51,11 @@ app.get('/detail/:fbid', detail.view);
 app.get('/fblogin', fblogin.view);
 app.get('/friendsearch/:prefix', friendsearch.friendsWithPrefix);
 
+if (typeof NODE_ENV === 'undefined') {
+  NODE_ENV = 'localhost';
+}
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
+  console.log("Running on " + NODE_ENV);
 });
