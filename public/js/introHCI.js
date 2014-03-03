@@ -48,9 +48,7 @@ function goBackClicked(e) {
 
 function textClicked(e) {
 	var textURL = "sms://" + $("#user-number").text();
-	console.log(textURL);
-	alert(textURL);
-	window.location.href = "sms://911";
+	window.location.href = "textURL;
 }
 
 function createRecommendationClicked(e) 
