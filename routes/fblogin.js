@@ -18,6 +18,11 @@ exports.view = function(req, res){
   "&permissions=" + permissions;
 
   request(access_token_url, function(error, response, body) {
+
+    if (error) console.log(error);
+    console.log(body);
+    console.log("=====");
+
     req.session.fb_access_token = body.substring(13, body.indexOf("&"));
 
     // After user is logged in, save their facebook id
