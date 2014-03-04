@@ -8,6 +8,9 @@ var request = require('request');
   var models = require('../models');
 
 exports.view = function(req, res){
+  if (!req.session.fb_access_token) {
+    res.redirect("/");
+  }
 
   // Before rendering the recommendation view, fetch the users facebook friends
   var friendslistURL = "https://graph.facebook.com/" + req.session.user_id + "/friends" + "?access_token="+ req.session.fb_access_token;

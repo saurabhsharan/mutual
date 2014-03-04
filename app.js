@@ -9,11 +9,12 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
 
-var index = require('./routes/index');
+var feed = require('./routes/feed');
 var recommendation = require('./routes/recommendation');
 var detail = require('./routes/detail');
 var fblogin = require('./routes/fblogin');
 var friendsearch = require('./routes/friendsearch');
+var landing = require('./routes/landing');
 
 var local_database_name = 'mutual';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name;
@@ -23,7 +24,7 @@ mongoose.connect(database_uri);
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
@@ -43,7 +44,8 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
+app.get('/', landing.view);
+app.get('/feed', feed.view);
 // Example route
 app.get('/recommendation', recommendation.view);
 app.get('/submit_reco', recommendation.submit_reco);

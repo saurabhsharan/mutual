@@ -1,6 +1,6 @@
 
 /*
-* GET home page.
+* GET feed page.
 */
 
 var request = require('request');
@@ -8,18 +8,9 @@ var models = require('../models');
 
 exports.view = function(req, res) {
   if (!req.session.fb_access_token) {
-
-    if (NODE_ENV == 'localhost') {
-      var redirect_uri = encodeURIComponent("http://localhost:3000/fblogin");
-    } else {
-      var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
-    }
-
-    var fb_login_url = "https://www.facebook.com/dialog/oauth?client_id=607666969312706&redirect_uri=" + redirect_uri;
-    res.redirect(fb_login_url);
-    return;
+    res.redirect("/");
   }
-  
+
   if (req.query.alternate === 'true') {
     req.session.alternate = true;
   } else if (req.query.alternate === 'false') {
@@ -49,13 +40,6 @@ exports.view = function(req, res) {
       "recommendations": recommendations
     };
     
-    res.render('index', allRecommendations)
-  
+    res.render('feed', allRecommendations)
   }
-
-  
-  // request("https://graph.facebook.com/me?access_token=" + req.session.fb_access_token, function(error, response, body) {
-    //   var user_info = JSON.parse(body);
-    //   res.send("Hello, " + user_info['name']);
-    // });*/
 }

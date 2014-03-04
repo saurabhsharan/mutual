@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mutual</title>
+	<meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<style type="text/css" media="screen">
+	  body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    h1 {
+      margin: 10px 0px;
+      font-size: 38px;
+      line-height: 44px;
+      font-weight: 700;
+    }
+    h2 {
+      margin: 10px 0px;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 700;
+    }
+    h3 {
+      margin: 10px 0px;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+    h4 {
+      margin: 10px 0px;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+    h5 {
+      margin: 10px 0px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+    h6 {
+      margin: 10px 0px;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+    .button {
+      display: inline-block;
+      padding: 4px 15px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+    }
+    @media (max-width: 479px) {
+      body {
+        margin-top: 0px;
+        margin-bottom: 5px;
+        padding-top: 0px;
+        background-color: white;
+      }
+      p {
+        height: 175px;
+        margin-top: 9px;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding-right: 0px;
+        padding-left: 0px;
+        font-family:'Open Sans', sans-serif;
+        text-align: center;
+      }
+      .button {
+        margin-top: 94px;
+        margin-right: 25px;
+        margin-left: 26px;
+      }
+      .tile {
+        display: block;
+        width: 298px;
+        height: 375px;
+        margin: 14px auto 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        float: none;
+        border: 1px solid #c3becf;
+        border-radius: 0px;
+        background-color: #ebedeb;
+      }
+      .photo {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0px 3px 10px;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        float: left;
+        border-radius: 100px;
+        background-color: white;
+      }
+      .name {
+        display: inline-block;
+        width: 125px;
+        height: 60px;
+        margin-top: 41px;
+        margin-right: 0px;
+        margin-left: 26px;
+        padding-top: 0px;
+        padding-left: 0px;
+        float: none;
+        font-size: 14px;
+      }
+      .recommendationheader {
+        position: static;
+        display: block;
+        overflow-x: visible;
+        overflow-y: visible;
+        height: 120px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-top: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+        background-color: #ffc4c4;
+        color: #f79e9e;
+        text-align: left;
+      }
+      .tile2 {
+        height: 200px;
+      }
+      .namefield {
+        margin-top: 59px;
+        margin-right: 16px;
+        margin-left: 143px;
+        font-family:'Open Sans', sans-serif;
+        color: black;
+        font-size: 18px;
+        text-align: center;
+      }
+      .descriptionheader {
+        width: 200px;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+        text-align: left;
+      }
+      .recommendeephoto {
+        width: 100px;
+        height: 100px;
+        margin: 20px 0px 20px 20px;
+        float: left;
+        border-radius: 7px;
+      }
+      .recomendeename {
+        position: static;
+        display: block;
+        margin: 63px auto 0px;
+        padding-bottom: 0px;
+        float: none;
+        clear: none;
+        font-family:'Open Sans', sans-serif;
+        font-size: 20px;
+        text-align: center;
+      }
+      .navigation-bar {
+        height: 60px;
+        float: none;
+        background-color: #ff9696;
+      }
+      .left-button {
+        position: static;
+        display: block;
+        overflow-x: visible;
+        overflow-y: visible;
+        margin-top: 21px;
+        margin-left: 21px;
+        float: left;
+        clear: none;
+        color: white;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      .right-button {
+        position: static;
+        display: block;
+        overflow-x: visible;
+        overflow-y: visible;
+        margin-top: 21px;
+        margin-right: 21px;
+        float: right;
+        clear: none;
+        color: white;
+        font-size: 16px;
+        text-align: left;
+      }
+      .mutual-header {
+        display: block;
+        margin-top: 19px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 0px;
+        float: none;
+        color: white;
+        font-size: 28px;
+        text-align: center;
+      }
+      .recommendee-header {
+        background-color: #f7d0d0;
+      }
+      .logo {
+        margin-top: 123px;
+      }
+      .description {
+        margin-top: 68px;
+        margin-left: 0px;
+        padding-right: 25px;
+        padding-left: 25px;
+        text-align: center;
+      }
+    }
+	</style>
+</head>
+
+<body>
+  <img class="logo" src="images/mutualLogo.png" alt="531643c1e37fea441e00003e_logo.PNG">
+  <div class="description">Ever thought two of your friends would get along really well?&nbsp;<strong>Mutual</strong> allows you to recommend that your facebook friends meet and allows your friends to do the same for you! <strong>Thus using the power of existing friendships to form new ones.</strong>
+  </div><a class="button" href="{{fb_login_url}}">Sign in using Facebook to get started!</a>
+</body></html>

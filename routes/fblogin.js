@@ -6,8 +6,7 @@
 var request = require('request');
 var models = require('../models');
 
-exports.view = function(req, res){
-
+exports.view = function(req, res) {
   var permissions = "read_friendlists"
   var fb_code = req.query.code;
 
@@ -16,6 +15,7 @@ exports.view = function(req, res){
   } else {
     var redirect_uri = encodeURIComponent("http://mutual.herokuapp.com/fblogin");
   }
+
   var access_token_url = "https://graph.facebook.com/oauth/access_token?client_id=607666969312706&redirect_uri=" + redirect_uri + 
   "&client_secret=300b02a4cbc79db08ce874b7aa2a2f71&code=" + fb_code +
   "&permissions=" + permissions;
@@ -46,10 +46,10 @@ exports.view = function(req, res){
           });
           
           newUser.save(function(err) {
-            res.redirect("/");
+            res.redirect("/feed");
           });
         } else {
-          res.redirect("/");
+          res.redirect("/feed");
         }
       });
     });
