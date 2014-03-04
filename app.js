@@ -24,7 +24,7 @@ mongoose.connect(database_uri);
 var app = express();
 
 // all environments
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
