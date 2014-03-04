@@ -70,14 +70,14 @@ exports.submit_reco = function(req, res) {
     twilio_client.sendMessage({
       to: '+1' + person1_number,
       from: '+18052840161',
-      body: "You have a new recommendation: Go to http://mutual.herokuapp.com/ for more info!"
+      body: req.session.first_name + " " + req.session.last_name + " recommended that you meet " + req.query.person2firstname + " " + req.query.person2lastname + ". Go to http://mutual.herokuapp.com for more info!"
     });
     
     setTimeout(function() {
       twilio_client.sendMessage({
         to: '+1' + person2_number,
         from: '+18052840161',
-        body: "You have a new recommendation: Go to http://mutual.herokuapp.com/ for more info!"
+        body: req.session.first_name + " " + req.session.last_name + " recommended that you meet " + req.query.person1firstname + " " + req.query.person1lastname + ". Go to http://mutual.herokuapp.com for more info!"
       });
     }, 500);
     

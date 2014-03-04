@@ -53,15 +53,24 @@
       font-weight: 700;
     }
     p {
-      margin-bottom: 5px;
+/*      margin-bottom: 5px;*/
+      padding: 0;
     }
     .button {
       display: inline-block;
       padding: 4px 15px;
-      background-color: black;
+      background-color: #342340;
       color: white;
       text-align: center;
       text-decoration: none;
+    }
+    .box {
+      width: auto;
+/*      padding: 50px;*/
+      margin-top: 0;
+/*      margin-left: auto;*/
+/*      margin-right: auto;*/
+/*      background-color: black;*/
     }
     @media (max-width: 479px) {
       body {
@@ -72,7 +81,7 @@
       }
       p {
         height: 175px;
-        margin-top: 9px;
+/*        margin-top: 9px;*/
         margin-right: 10px;
         margin-left: 10px;
         padding-right: 0px;
@@ -81,9 +90,10 @@
         text-align: center;
       }
       .button {
-        margin-top: 94px;
+        margin-top: 8px;
         margin-right: 25px;
         margin-left: 26px;
+        background-color: #342340;
       }
       .tile {
         display: block;
@@ -219,10 +229,13 @@
         background-color: #f7d0d0;
       }
       .logo {
-        margin-top: 123px;
-      }
+/*        margin-top: 123px;*/
+/*        position: absolute;
+            top: 0; bottom:0; left: 0; right:0;
+          margin: auto;      
+*/      }
       .description {
-        margin-top: 68px;
+        margin-top: 30px;
         margin-left: 0px;
         padding-right: 25px;
         padding-left: 25px;
@@ -233,7 +246,12 @@
 </head>
 
 <body>
-  <img class="logo" src="images/mutualLogo.png" alt="531643c1e37fea441e00003e_logo.PNG">
-  <div class="description">Ever thought two of your friends would get along really well?&nbsp;<strong>Mutual</strong> allows you to recommend that your facebook friends meet and allows your friends to do the same for you! <strong>Thus using the power of existing friendships to form new ones.</strong>
-  </div><a class="button" href="{{fb_login_url}}">Sign in using Facebook to get started!</a>
+  <div class="box">
+    <p style="text-align:center"><img width="225" height="225" class="logo" src="images/mutualLogo.png" alt="531643c1e37fea441e00003e_logo.PNG"></p>
+    <div class="description" style="text-align: center;"><strong>Mutual</strong> allows you to recommend that your facebook friends meet and allows your friends to do the same for you! <strong>Thus using the power of existing friendships to form new ones.</strong>
+    </div>
+    <p style="text-align:center">
+      <a class="button" href="{{fb_login_url}}">Sign in using Facebook to get started!</a>
+    </p>
+  </div>
 </body></html>
