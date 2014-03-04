@@ -7,6 +7,12 @@ var request = require('request');
 var models = require('../models');
 
 exports.view = function(req, res) {
+  if (req.query.alternate === 'true') {
+    req.session.alternate = true;
+  } else if (req.query.alternate === 'false') {
+    req.session.alternate = false;
+  }
+  
   if (req.session.fb_access_token) {
     res.redirect("/feed");
   } else {
