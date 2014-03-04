@@ -81,7 +81,10 @@ function textClicked(e) {
 	var textURL = "sms://" + $("#user-number").text();
 	console.log(textURL);
 	ga("send", "event", "text", "click");
-	window.location.href = textURL;
+	
+	setTimeout(function() {
+	  window.location.href = textURL;
+	}, 2000);
 }
 
 function createRecommendationClicked(e) 
