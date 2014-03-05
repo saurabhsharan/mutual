@@ -7,6 +7,7 @@ var request = require('request');
 var models = require('../models');
 
 exports.view = function(req, res) {
+
   if (!req.session.fb_access_token) {
     res.redirect("/");
   }

@@ -23,16 +23,17 @@ exports.view = function(req, res) {
   request(access_token_url, function(error, response, body) {
 
     if (error) console.log(error);
-    console.log(body);
-    console.log("=====");
 
     req.session.fb_access_token = body.substring(13, body.indexOf("&"));
 
     // After user is logged in, save their facebook id
-    
+
     var userDataURL = "https://graph.facebook.com/me?access_token=" + req.session.fb_access_token;
+    
     request(userDataURL, function(error, response, body) {
+
       var user_info = JSON.parse(body);
+      console.log(user_info.first_name + " logged in with access_token: " + req.session.fb_access_token);
       req.session.user_id = user_info.id;
       req.session.first_name = user_info.first_name;
       req.session.last_name = user_info.last_name;
@@ -53,12 +54,6 @@ exports.view = function(req, res) {
         }
       });
     });
-
-	// var permissionsURL = "https://graph.facebook.com/" + user_info.id + "/permissions" + "?access_token="+ req.session.fb_access_token;
-	// request(permissionsURL, function(error, response, body) {
-	//   var permissions = JSON.parse(body);
-	//   console.log(permissions);
-	// });
 
   });
 

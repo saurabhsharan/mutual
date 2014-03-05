@@ -81,9 +81,25 @@
 .recommendationlabel {
   color: #002f2f;
 }
-.friend-tile {
-  margin: 10px;
+.namefield-container {
+  padding: 25px;
 }
+.friend-tile-picture {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+.friend-tile-name {
+  padding-left: 15px;
+}
+.friend-tile {
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  background: #FFFAD5;
+  font-size: 14px;
+}
+
 .friend-tile-facebookid {
   display: none;
 }

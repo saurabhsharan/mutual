@@ -19,6 +19,11 @@ exports.view = function(req, res){
   request(friendslistURL, function(error, response, body) {
     var friends = JSON.parse(body);
     req.session.friendslist = friends.data;
+
+    for (var friend in friends.data) {
+      friends.data[friend].pictureURL = "http://graph.facebook.com/" + friends.data[friend].id + "/picture?width=100&height=100";
+    }
+    console.log(friends);
     res.render('recommendation', friends);
 
   });

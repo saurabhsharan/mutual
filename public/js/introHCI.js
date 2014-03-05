@@ -94,6 +94,12 @@ function createRecommendationClicked(e)
 
 function friendSelected(e) {
 
+	//$(this).toggle("highlight");
+	$(this).effect("highlight", {color: '#91aa9d'}, 3000);
+	//this.animate({color:'red'}, 300);
+        // }, function () {
+        // $(this).stop().animate({backgroundColor:'#943D20'}, 100);
+
 	var name = $(this).children(".friend-tile-name").text().split(" ");
 	var firstname = name[0];
 	var lastname = name[1];
@@ -147,7 +153,7 @@ function updateFriendsDisplay(result) {
 	var html = "";
 
 	for (var friend in result) {
-		var friendDiv = '<div class="friend-tile"> <span class="friend-tile-name">' + result[friend].name 
+		var friendDiv = '<div class="friend-tile"> <img class="friend-tile-picture" src="' + result[friend].pictureURL + '"> <span class="friend-tile-name">' + result[friend].name 
 		+ '</span> <span class="friend-tile-facebookid">' + result[friend].id + '</span></div>';
 
 		html += friendDiv;
