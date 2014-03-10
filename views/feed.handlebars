@@ -34,20 +34,24 @@
     <div id="mutualHeader" class="mutual-header">Mutual</div>
   </div>
 
-  {{#each recommendations}}
-  <div class="recommendation" data-fb-id="{{recommendee2.facebookID}}">
 
-    <img class="recommender-picture" src="http://{{recommender.picture}}" alt="image-placeholder.svg">
-    <img class="recommendation-image" src="/images/recommendation_symbol.png" alt="image-placeholder.svg">
-    <img class="recommendee-picture" src="http://{{recommendee2.picture}}" alt="image-placeholder.svg">
-    <div class="recommendation-description">
-      {{recommender.first_name}} recommends that you meet {{recommendee2.first_name}}
+  {{#if recommendations.length}}
+    <div id="no-rec-text">You don't have any recommendations right now. Why don't you try recommending some of your friends? Tap the "Recommend" button on the top-right corner of the screen.</div>
+  {{else}}
+    {{#each recommendations}}
+    <div class="recommendation" data-fb-id="{{recommendee2.facebookID}}">
+
+      <img class="recommender-picture" src="http://{{recommender.picture}}" alt="image-placeholder.svg">
+      <img class="recommendation-image" src="/images/recommendation_symbol.png" alt="image-placeholder.svg">
+      <img class="recommendee-picture" src="http://{{recommendee2.picture}}" alt="image-placeholder.svg">
+      <div class="recommendation-description">
+        {{recommender.first_name}} recommends that you meet {{recommendee2.first_name}}
+      </div>
+
+      </div>
     </div>
-
-    </div>
-  </div>
-  {{/each}}
-
+    {{/each}}
+  {{/if}}
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
