@@ -15,11 +15,11 @@ exports.view = function(req, res) {
   }
   
   // For local dev (uncomment this, and comment out all GoogleAnalytics scripts): nathan
-  // if (NODE_ENV == 'localhost') {
-  //     console.log("2");
-  //   req.session.fb_access_token = "CAAIoq33YZCcIBAAuo65r70EmXofY7ZALAaDWrjXHXcnrInZB3AVWNZBfhsSpoKJFQXOMBZBK0iJMUvVCClv5b7UxNp4SAbe6CiJOko1rvQm4tcB9LA7kbpqki5De0aTh3ZAzpPF1I2KezOX2FY1oC5qdZCjG0WGAC9gJ7CNui3dPPPtgGhAzf80uvw2EuM40rQZD";
-  //   req.session.user_id = 1495998285;
-  // }
+  if (NODE_ENV == 'localhost') {
+      console.log("2");
+    req.session.fb_access_token = "CAAIoq33YZCcIBAAuo65r70EmXofY7ZALAaDWrjXHXcnrInZB3AVWNZBfhsSpoKJFQXOMBZBK0iJMUvVCClv5b7UxNp4SAbe6CiJOko1rvQm4tcB9LA7kbpqki5De0aTh3ZAzpPF1I2KezOX2FY1oC5qdZCjG0WGAC9gJ7CNui3dPPPtgGhAzf80uvw2EuM40rQZD";
+    req.session.user_id = 1495998285;
+  }
 
   if (req.session.fb_access_token) {
     res.redirect("feed");

@@ -20,7 +20,7 @@ h5 {
   margin-left: 15px;
   float: left;
   border-radius: 60px;
-  border: 2px solid #5FA4A1;
+  border: 1px solid #5FA4A1;
 
 }
 .header-name {
@@ -45,26 +45,29 @@ h5 {
 .why-label {
   text-align: left;
   padding-left: 15px;
-  font-size: 19px;
+  font-size: 15px;
+  margin-bottom: 10px;
+
 }
 
 .recommendation-tile {
   height: auto;
   margin: 15px;
+  margin-top: 0px;
   background-color: #ECF3ED;
   border-bottom: 1px solid #5FA4A1;
 }
 .tile-header {
-  height: 110px;
+  height: auto;
 }
 .tile-picture {
   width: 80px;
-  margin-top: -30px;
+  margin-top: -40px;
   margin-left: 16px;
   padding-top: 0px;
   padding-left: 0px;
   border-radius: 40px;
-  border: 2px solid #5FA4A1;
+  border: 1px solid #5FA4A1;
 }
 .tile-header-text {
   position: static;
@@ -73,14 +76,12 @@ h5 {
   overflow-y: visible;
   width: 180px;
   height: 64px;
-  margin-top: 0px;
   margin-bottom: 0px;
-  padding-top: 71px;
+  padding-top: 70px;
   padding-bottom: 0px;
-  padding-left: 2px;
   float: none;
   clear: none;
-  text-align: center;
+  text-align: left;
   font-size: 15px;
 }
 .tile-description {
@@ -90,6 +91,5 @@ h5 {
   padding-right: 10px;
   padding-bottom: 15px;
   padding-left: 10px;
-  padding-top: 10px;
-  font-size: 14px;
+  margin-top: 20px;
 }

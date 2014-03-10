@@ -16,7 +16,6 @@
   padding-left: 15px;
   float: none;
   background-color: #D1DBBD;
-  font-family: Arial, Helvetica, sans-serif;
   color: #D1DBBD;
   font-size: 15px;
   line-height: 18px;
@@ -37,13 +36,14 @@
   margin-top: 40px;
   margin-left: 40px;
   border-radius: 50px;
-  border: 2px solid #5FA4A1;
+  border: 1px solid #5FA4A1;
 }
 .submitbutton {
   display: block;
   width: 90px;
   height: 40px;
   margin: 20px;
+  margin-bottom: 10px;
   margin-right: auto;
   margin-left: auto;
   float: none;
@@ -55,20 +55,21 @@
 .person1-label {
   width: 130px;
   margin-top: 10px;
-  margin-left: 25px;
+  margin-left: 24px;
   float: left;
   text-align: center;
 }
 .person2-label {
   width: 130px;
   margin-top: 10px;
-  margin-right: 23px;
+  margin-right: 21px;
   float: right;
   text-align: center;
 }
 
 .formWrapper {
   margin: 30px;  
+  margin-bottom: 0px;
   display: none;
 }
 .formInput {
@@ -100,6 +101,9 @@
   font-size: 14px;
   border-bottom: 1px dashed #5FA4A1;
 }
+.friend-search {
+  padding-left: 25px;
+}
 
 .friend-tile-facebookid {
   display: none;
@@ -107,10 +111,14 @@
 
 .person-name {
   border: 0px;
+  border-radius: 0px;
   border-bottom: 2px solid #5FA4A1;
 }
 .directions {
   font-size: 16px;
   margin-bottom: 10px;
   text-align: center;
+}
+.submit-warning {
+  font-size: 11px;
 }
