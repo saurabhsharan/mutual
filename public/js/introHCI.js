@@ -80,11 +80,11 @@ function goBackClicked(e) {
 function textClicked(e) {
 	var textURL = "sms://" + $("#user-number").text();
 	console.log(textURL);
-	ga("send", "event", "text", "click");
+	// ga("send", "event", "text", "click");
 	
 	setTimeout(function() {
 	  window.location.href = textURL;
-	}, 2000);
+	}, 1000);
 }
 
 function createRecommendationClicked(e) 
