@@ -9,9 +9,8 @@
 
 .recommendation {
   height: 220px;
-  background-color: #FFFAD5;
-  border: 1px solid #D1DBBD;
-  margin-bottom: 4px;
+  background-color: #ECF3ED;
+  border-bottom: 1px dashed #5FA4A1;
 }
 
 .recommender-picture {
@@ -22,7 +21,7 @@
   margin-left: 20px;
   padding-left: 0px;
   border-radius: 40px;
-  border: 2px solid #105B63
+  border: 2px solid #5FA4A1
 }
 
 .recommendee-picture {
@@ -31,7 +30,7 @@
   margin-top: 30px;
   margin-right: 20px;
   border-radius: 60px;
-  border: 2px solid #105B63;
+  border: 2px solid #5FA4A1;
 }
 
 .recommendation-image {

@@ -28,7 +28,7 @@
   margin-bottom: 0px;
   padding-right: 0px;
   padding-left: 0px;
-  background-color: #fffad5;
+  background-color: #ECF3ED;
   display: none;
 }
 .peopleselector img {
@@ -37,7 +37,7 @@
   margin-top: 40px;
   margin-left: 40px;
   border-radius: 50px;
-  border: 1px solid #105B63;
+  border: 2px solid #5FA4A1;
 }
 .submitbutton {
   display: block;
@@ -49,7 +49,7 @@
   float: none;
   border-radius: 5px;
   border: 0px;
-  background-color: #105B63;
+  background-color: #72C4C0;
   color: white;
 }
 .person1-label {
@@ -76,6 +76,7 @@
   display: block;
   background-color: #FFFFFF;
   border-radius: 2px;
+  border: 1px solid #5FA4A1;
   margin-bottom: 10px;
 }
 .recommendationlabel {
@@ -94,12 +95,22 @@
 }
 .friend-tile {
   height: auto;
-  margin: 10px;
   padding: 10px;
-  background: #FFFAD5;
+  background: #ECF3ED;
   font-size: 14px;
+  border-bottom: 1px dashed #5FA4A1;
 }
 
 .friend-tile-facebookid {
   display: none;
+}
+
+.person-name {
+  border: 0px;
+  border-bottom: 2px solid #5FA4A1;
+}
+.directions {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
 }

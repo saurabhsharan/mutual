@@ -23,7 +23,6 @@ exports.view = function(req, res){
     for (var friend in friends.data) {
       friends.data[friend].pictureURL = "http://graph.facebook.com/" + friends.data[friend].id + "/picture?width=100&height=100";
     }
-    console.log(friends);
     res.render('recommendation', friends);
 
   });
