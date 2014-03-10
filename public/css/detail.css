@@ -1,6 +1,8 @@
-body {
-  padding-top: 1px;
+body 
+{
+  background-color: #ECF3ED;
 }
+
 h5 {
   padding-left: 20px;
   color: #193441;
@@ -9,6 +11,7 @@ h5 {
 .detail-header {
   height: 150px;
   margin-bottom: 15px;
+  background-color: white;
 }
 .header-picture {
   width: 120px;
@@ -17,7 +20,7 @@ h5 {
   margin-left: 15px;
   float: left;
   border-radius: 60px;
-  border: 2px solid #105B63;
+  border: 2px solid #5FA4A1;
 
 }
 .header-name {
@@ -34,21 +37,25 @@ h5 {
   margin-right: 30px;
   padding-top: 9px;
   float: right;
-  background-color: #105B63;
-  color: #FFFAD5;
+  background-color: #72C4C0;
+  color: white;
   text-align: center;
   border-radius: 3px;
 }
-
+.why-label {
+  text-align: left;
+  padding-left: 15px;
+  font-size: 19px;
+}
 
 .recommendation-tile {
   height: auto;
   margin: 15px;
-  background-color: #fffad5;
+  background-color: #ECF3ED;
+  border-bottom: 1px solid #5FA4A1;
 }
 .tile-header {
   height: 110px;
-  background-color: #91aa9d;
 }
 .tile-picture {
   width: 80px;
@@ -57,14 +64,14 @@ h5 {
   padding-top: 0px;
   padding-left: 0px;
   border-radius: 40px;
-  border: 2px solid #105B63;
+  border: 2px solid #5FA4A1;
 }
 .tile-header-text {
   position: static;
   display: inline-block;
   overflow-x: visible;
   overflow-y: visible;
-  width: 150px;
+  width: 180px;
   height: 64px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -74,14 +81,14 @@ h5 {
   float: none;
   clear: none;
   text-align: center;
-  font-size: 17px;
+  font-size: 15px;
 }
 .tile-description {
   height: auto;
-  min-height: 120px;
+  min-height: 50px;
   margin-left: 0px;
   padding-right: 10px;
-  padding-bottom: 0px;
+  padding-bottom: 15px;
   padding-left: 10px;
   padding-top: 10px;
   font-size: 14px;

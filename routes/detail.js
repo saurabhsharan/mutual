@@ -8,7 +8,7 @@ exports.view = function(req, res) {
   }
   
   var FBid = req.params.fbid;
-
+  console.log("Getting details for FBID: " + FBid);
   //NEED TO FIX THE BELOW QUERY
   models.Recommendation
     .find({$or: [{$and: [{"recommendee2.facebookID": FBid}, {"recommendee1.facebookID": req.session.user_id}]}

@@ -1,14 +1,3 @@
-/* applies to anything of class "example-class-selector" */
-.example-class-selector {
-	margin-top: 2em;
-}
-
-/* applies to any <p> descendants of an element of class "example-class-selector" */
-.example-class-selector p {
-	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
-	color: #CC00AA;
-}
-
 
 body {
   max-height: 1000px;
@@ -17,7 +6,12 @@ body {
   font-size: 13px;
   line-height: 20px;
   margin-top: 60px;
-  background-color: #D1DBBD;
+  background-color: white;
+  color: #193441;
+}
+
+label {
+  color: #193441;
 }
 
 .button {
@@ -33,8 +27,8 @@ body {
   height: 60px;
   width: 100%;
   float: none;
-  background-color: #105B63;
-  color: #FFFAD5;
+  background-color: #72C4C0;
+  color: white;
   padding: 0px;
   margin: 0px;
   position: fixed;
