@@ -49,3 +49,9 @@
   margin-bottom: 25px;
   text-align: center;
 }
+
+#no-rec-text {
+  text-align: center;
+  padding: 30px;
+  background-color: #ECF3ED;
+}

@@ -10,8 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/feed.css" rel="stylesheet">
   <link href="/css/app.css" rel="stylesheet">      
+	<link href="/css/feed.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,19 +21,25 @@
     <div id="mutualHeader" class="mutual-header">mutual</div>
   </div>
 
-  {{#each recommendations}}
-  <div class="recommendation" data-fb-id="{{recommendee2.facebookID}}">
 
-    <img class="recommender-picture" src="http://{{recommender.picture}}" alt="image-placeholder.svg">
-    <img class="recommendation-image" src="/images/recommendation_symbol.png" alt="image-placeholder.svg">
-    <img class="recommendee-picture" src="http://{{recommendee2.picture}}" alt="image-placeholder.svg">
-    <div class="recommendation-description">
-      {{recommender.first_name}} recommends that you meet {{recommendee2.first_name}}
+  {{#if recommendations.length}}
+
+    {{#each recommendations}}
+    <div class="recommendation" data-fb-id="{{recommendee2.facebookID}}">
+      <img class="recommender-picture" src="http://{{recommender.picture}}" alt="image-placeholder.svg">
+      <img class="recommendation-image" src="/images/recommendation_symbol.png" alt="image-placeholder.svg">
+      <img class="recommendee-picture" src="http://{{recommendee2.picture}}" alt="image-placeholder.svg">
+      <div class="recommendation-description">
+        {{recommender.first_name}} recommends that you meet {{recommendee2.first_name}}
+      </div>
     </div>
+    {{/each}}
 
-  </div>
-  {{/each}}
-
+  {{else}}
+    <div id="no-rec-text">
+      You don't have any recommendations right now. Try recommending some of your friends -  they may return the favor!
+    </div>
+  {{/if}}
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
