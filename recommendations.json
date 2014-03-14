@@ -75,7 +75,7 @@
             "facebookID": "1495998285",
             "picture": "graph.facebook.com/neidelson/picture?width=200&height=200",
             "phone": "8054509609",
-            "text": "description"
+            "text": "He is a really good programmer!"
         },
 
         "recommendee2" : 
@@ -85,7 +85,7 @@
             "facebookID": "100001497771693",
             "picture": "graph.facebook.com/saurabhsharan/picture?width=200&height=200",
             "phone": "4088396349",
-            "text": "blah"
+            "text": "He likes to make cool apps, and is also a Section Leader."
         }
     },
 
@@ -105,7 +105,7 @@
             "facebookID": "1128653899",
             "picture": "graph.facebook.com/ambika.acharya.37/picture?width=200&height=200",
             "phone": "6464630213",
-            "text": "test on multiple people recommending Saurabh but not to Nathan"
+            "text": "He is really into hiking, and he also lives in Toyon."
         },
 
         "recommendee2" : 
@@ -115,7 +115,7 @@
             "facebookID": "100001497771693",
             "picture": "graph.facebook.com/saurabhsharan/picture?width=200&height=200",
             "phone": "4088396349",
-            "text": "test on multiple people recommending Saurabh but not to Nathan"
+            "text": "She is really into the outdoors, and she also lives in Toyon."
         }
     }
 
